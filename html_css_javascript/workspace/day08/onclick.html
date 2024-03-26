@@ -6,20 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>10 + 50 = <span id="question">?</span> </h1>    
-    <input type="button" value="결과보기" 
-        onclick="printResult();">
+    <ul>
+        <h1>10 +50 = <span id = "question">?</span></h1>
+    </ul>
+    <input type="button" value="결과보기"
+    onclick="printResult()">
     <script>
         function printResult(){
-            let mytag = document.getElementById("question");
-            mytag.innerHTML = 60;
+            console.log("함수도착");
+            document.getElementById("question").innerHTML=60;
+         
         }
     </script>
+    
 </body>
 </html>
-
-
-
-
-
-

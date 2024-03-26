@@ -21,7 +21,7 @@ class Member{
 	}
 }
 
-public class Main01 {
+public class main01 {
 
 	public static void main(String[] args) {
 		Member member = new Member();

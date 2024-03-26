@@ -1,23 +1,13 @@
 package loop;
 
-public class Main05 {
-
+public class main05 {
 	public static void main(String[] args) {
-		// 구구단 7단. do~while
-		int j = 0;
+		int a = 0;
 		int i = 1;
-		
 		do {
-			j = 7 * i;
-			System.out.println(j);
+			a = i * 7;
 			i++;
-		}while(i <= 9);
-		
+			System.out.println(a);
+		} while (i < 10);
 	}
-
 }
-
-
-
-
-

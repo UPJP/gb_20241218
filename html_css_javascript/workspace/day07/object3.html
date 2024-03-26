@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
-        let person = {
-            key     : "value",
-            key2    : true,
-            key3    : undefined,
-            key4    : [1,2],
-            key5    : {},
-            key6    : function(){}
-        };
-        // key 이름이 중복만 되지 않으면 가능
-        // key 이름이 중복되면, 가장 마지막 key가 우선된다.
-        console.log(person.key);
-        console.log(person["key"]);    
-    </script>    
+  <script>
+    let person = {
+      key : "value",
+      key2 : true,
+      key3 : undefined,
+      key4 : [1,2],
+      key5 : {},
+      key6 : function(){},
+
+    };
+    // key 이름이 중복만 되지 않으면 가능
+    // key 이름이 중복되면, 가장 마지막 key가 우선된다.
+    console.log(person.key);
+    console.log(person["key"]);
+
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

@@ -1,0 +1,14 @@
+1. 화면 이동방식
+ - Redirect
+	->클라이언트가 요청했을 때 이전의 값이 남아있지 않도록 하기 위해 사용
+ - Foraward 
+	-> 목록 검색할때 사용
+ 	-> 검색 결과를 유지한 채로 페이지 이동처리
+
+
+
+2. 상대경로 절대경로
+ - EL 내 현재 위치
+ - ${oageContext.request.contextPath}
+ - JSP : <%= requset.getContextPath() %>
+ - 상대 경로(내 위치에 따라 값이 변하는 값)가 아닌 절대경로로 고정된다.

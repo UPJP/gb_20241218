@@ -6,25 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 onmouseover="showResult()" onmouseout="hideResult()">10 + 50 =  
-        <span id="question">?</span> 
+    <h1 onmouseover="showResult()" onMouseout="ss()"> 10+50 =
+        <span id ="question">?</span> 
     </h1>
-    <p>결과를 보시려면 수식 위에 마우스를 올리세요</p>
+    <p>결과를 보시러면 수직 위에 마우스를 올리세요 </p>
     <script>
         function showResult(){
-            //console.log('mouse event');
-            document.getElementById("question").innerHTML = 60;
+            console.log("mouse event")
+            document.getElementById("question").innerHTML= 60;  
         }
-        // 마우스를 벗어났을때, question영역에 ? 
-        function hideResult(){
-            document.getElementById("question").innerHTML = "?";
+        function ss(){
+            
+            document.getElementById("question").innerHTML= '?';
         }
+        //마우스를 벗어났을때, question영역에 
+
     </script>
 </body>
 </html>
-
-
-
-
-
-

@@ -9,18 +9,12 @@ class User{
 		this.age = age;
 	}
 }
-
-public class Main03 {
-
+public class main03 {
 	public static void main(String[] args) {
-		User u = new User("자바학생", 20);
+		User u = new User("자바학생" , 20);
 		System.out.println(u.name);
 		System.out.println(u.age);
-		
 		
 	}
 
 }
-
-
-

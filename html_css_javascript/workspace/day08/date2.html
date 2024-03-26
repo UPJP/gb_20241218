@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script>        
-        // 요일
-        let days = ["일","월","화","수","목","금","토"];
+    <script>
+
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
 
         let mydate = new Date();
         mydate.setYear(2010);
-        mydate.setMonth(1);     // 2월
+        mydate.setMonth(1); // 2월
         mydate.setDate(14);
         mydate.setHours(12);
         mydate.setMinutes(16);
-        mydate.setSeconds(30);
+        mydate.setSeconds(30); 
 
-        // 세팅한 날짜 리턴받기
+        //세팅한 날짜 리턴받기
+
         let yy = mydate.getFullYear();
         let mm = mydate.getMonth() + 1;
         let dd = mydate.getDate();
         let i = mydate.getDay();
-        let day = days[i];
+        
+        let day = days[i]
 
         let hh = mydate.getHours();
         let mi = mydate.getMinutes();
         let ss = mydate.getSeconds();
 
-        let result = yy + "-" + mm + "-" + dd + "-"
-            + " " + day + "요일" 
-            + hh + ":" + mi + ":" + ss;
-        document.write("<h1>" + result + "</h1>");
-    </script>    
+
+        let result = yy + "." + mm + "." + dd +"-"+
+             day+"요일"+hh + ":" + mi + ":" + ss   ;
+
+        document.write(result);
+
+
+    </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

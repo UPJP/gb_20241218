@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
-        let grades = {
-            영어    : 90,
-            수학    : 100,
-            국어    : 88
-        };
-        for( i in grades ){
-            console.log(i);
-            console.log(grades[i]);
-        }
-        console.log("---------------");
-        let arr = ["a", "b", "c"];
-        for( name in arr ){
-            console.log(name);
-            console.log(arr[name]);
-        }
-    </script>    
+  <script>
+     let grades = {
+      영어 : 90,
+      수학 : 100,
+      국어 : 88
+    }
+    
+    // for(key in grades){
+    //   console.log(key);
+    // }
+
+    for(i in grades){
+      console.log(i);
+      console.log(grades[i])
+    }
+
+    let arr =["a","b","c"];
+    for (name in arr){
+      console.log(name);
+      console.log(arr[name]);
+    }
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

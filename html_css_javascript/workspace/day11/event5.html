@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    .event-box {
+        font-size: 20px;
+        padding: 20px 10px;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+        width: 500px;
+    }
+
+    .input {
+        border: 5px solid #007;
+        background: #d5d5d5;
+        color: #009;
+    }
+
+    .console {
+        border: 5px solid #a0a;
+        background: #d5d5d5;
+        color: #505;
+    }
+</style>
+
 <body>
-    <input type="button" value="click me" id="click_me">
-    <input type="button" value="unbind" id="remove_event">
+
     <script>
-        // ready event : HTML 랜더링이 완료 된 후 호출
-        $(document).bind('load',function(){
-            alert('test');
-            function clickHandler(e){
-                alert('hello javascript');
+        //ready event : HTML 렌더링이 완료 된 후 호출
+        $(document).bind('ready', function () {
+            function clickHandler(e) {
+                alert("hello javascript");
             }
-            $("#click_me").bind('click',clickHandler);
-            $("#remove_event").bind('click',function(){
-                $("#click_me").unbind('click',clickHandler);
-            });
+            $('#click_me').bind('click', clickHandler);
+
+
         });
-
     </script>
+
+    <input type="button" value="click_me" id="click_me">
+    <input type="button" value="unbind" id="remove_event">
 </body>
+
 </html>
-
-
-
-
-

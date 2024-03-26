@@ -23,7 +23,7 @@ class Student{
 	
 }
 
-public class Main06 {
+public class main06 {
 
 	public static void main(String[] args) {
 		Student s = new Student();

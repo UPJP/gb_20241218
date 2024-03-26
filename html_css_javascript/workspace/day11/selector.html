@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,29 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
-    .selected{
+    .selecterd{
         background-color: tomato;
-        border: 2px solid red;
+        border: 2px solid turquoise;
     }
 </style>
 <body>
     <ul id="list">
         <li>HTML</li>
         <li>CSS</li>
-        <li>JavaScript</li>
+        <li>Javascirpt</li>
         <li>PHP</li>
         <li>MySQL</li>
     </ul>
-    <script>
-        // $('#list li:even').addClass('selected');
-        // $('#list li:odd').addClass('selected');
-        // $('#list li:first').addClass('selected');
-        $('#list li:last').addClass('selected');
+
+    <script>// 개발자도구를 통해서 어디를 가져오는지 알수있음
+        // $('#list li:even').addClass('selecterd');  //even 짝수 odd 홀수
+        // $('#list li:odd').addClass('selecterd');
+        // $('#list li:first').addClass('selecterd');
+        $('#list li:last').addClass('selecterd');
+
+        
+
     </script>
 </body>
+
 </html>
-
-
-
-
-
-
-

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <form id="myform">
+        <div>
+            <label>사용자이름
+                <input type="text" name="username" id="username">
+            </label>
+        </div>
+        <div>
+            <label>비밀번호
+                <input type="password" name="userpass" id="userpass">
+            </label>
+        </div>
+        <button type="submit">입력값 확인</button>
+        <hr />
+        <!-- 선택한 결과를 표시할 div -->
+        <div id="result"></div>
+    </form>
+    <script>
+        $("#myform").submit(function (e) {
+            e.preventDefault();
+
+            // validation(처리)
+            let username = $("#username").val();               //입력값 가져오기
+            if(!username){                                     //입력값이 없다면
+                alert("이름을 입력하세요")                      //메세지 표시
+                $("#username").focus();                        //포커스 강제 지정
+                return false;                                  //함수 처리 중단
+            }
+            //password validation, result div태그 형식으로 pw 출력 
+            let userpass= $("#userpass").val();               //입력값 가져오기
+            if(!userpass){                                     //입력값이 없다면
+                alert("비밀번호를 입력해주세요")                      //메세지 표시
+                $("#userpass").focus();                        //포커스 강제 지정
+                return false;                                  //함수 처리 중단
+            }
+            
+            //입력값을 화면에 표시하기
+            $("#result").append("<div>이름 : "+ username + "</div>")
+            $("#result").append("<div>패스워드 : "+ userpass + "</div>")
+            
+            
+            //백엔드 페이제이게 데이터를 전달
+            //$(this).submit();
+        })
+    </script>
+</body>
+
+</html>

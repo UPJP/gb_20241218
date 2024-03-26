@@ -1,12 +1,12 @@
 package object;
 
-class Article2{
-	private int seq;		// 글번호
-	private String subject;	// 글제목
-	private String content;	// 글내용
-	private String writer;	// 작성자
-	private String regDate;	// 작성일
-	private int hit;		// 조회수
+class Article2 {
+	private int seq;		 //글번호
+	private String subject;  //글제목
+	private String content;  //글내용
+	private String writer;	 //작성자
+	private String regDate;	 //작성일
+	private int hit;		 //조회수
 	
 	public int getSeq() {
 		return seq;
@@ -45,29 +45,9 @@ class Article2{
 		this.hit = hit;
 	}
 	
+	
 }
 
-
-public class Main07 {
-
-	public static void main(String[] args) {
-		
-	}
+public class main07 {
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

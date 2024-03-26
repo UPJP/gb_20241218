@@ -1,0 +1,27 @@
+1. having 절
+ - where절 에서 집계함수를 사용할수 없다
+ - having절은 집계함수글 가지고 조건비교를 할때 사용된다
+ - group by 절에 많이 쓰인다.
+
+2. *Join 조인
+ 2-1. 조인이란 
+ - 두 개 이상의 테이블을 서로 연결하여 데이터를 검색할 때
+ 사용하는 방법으로 두 개의 테이블을 마치 하나의 테이블 인것처럼 보여주는 것이다
+
+2-2.조인의 기본 사용 방법
+ - 두개의 테이블에 하나라도 같은 컬럼이 있어야 한다
+ - 두 컬럼의 값은 공유 되어야 한다
+ - 보통 조인은 위해 기본키(Primary key)와 외래키(Foreign key)를 활용한다
+
+2-3. *inner join
+ - 각 테이블에서 조인 조건에 일치되는 데이터만 가져온다
+
+2-4. outer join
+ - 조인 조건에 일치하는 데이터 및 일치하지 않는 데이터를  모두 select 한다
+ - 조인 조건에 일치하는 데이터가 없다면 null로 가져온다
+ - Outer join은 inner join 과는 다르게 주(main)테이블이 어떤 테이블인지 중요하다
+   그래서 어떤 테이블이 중심이 되느냐,다시 left outer join, right outer join, full outer join으로 세분화 할수 있다
+
+- left outer join	: 왼쪽 테이블이 중심
+- right outer join : 오른쪽 테이블이 중심
+- full outer join 	: 양쪽 테이블이 중심   

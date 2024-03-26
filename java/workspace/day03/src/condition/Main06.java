@@ -1,33 +1,33 @@
 package condition;
 
-public class Main06 {
+public class main06 {
 
 	public static void main(String[] args) {
-		/*
-		 * 6. 서로 다른 특정 정수값 a,b,c의 
-		 * (a=10, b=20, c=9)
-		 * 최대값을 구하여라.
-		 */
-		int a=100, b=20, c=90;
-		int max=0;
-		
-		if( a>b && a>c ) {
-			max = a;
-		} else {
-			if( b > c ) {
-				max = b;
-			} else {
-				max = c;
-			}
-		}
-		System.out.println("최대값은 : " + max);
+	 int a= 100 ,b= 600,c= 70;
+	 
+	 
+	 if(a > b && a > c) {
+		 System.out.println(a);
 	}
-
+	 if(b > a && b > c) {
+		 System.out.println(b);
+	}
+	 if(c > a && c > b) {
+		 System.out.println(c);
+	}
+	 
+	// 센세 방법
+	 int max= 0;
+	 
+	 if(a > b && a > c) {
+		 max = a;
+	}else {
+		if (b>c ) {
+			max = b;
+		}else {
+			max =c;
+		}
+	}
+	 System.out.println("최댓값은 : "+max);
+	}
 }
-
-
-
-
-
-
-

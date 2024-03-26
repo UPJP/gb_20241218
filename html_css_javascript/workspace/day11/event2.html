@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<body>
-    <a href="http://www.naver.com" id="link1">Link1</a>
-    <hr>
-    <a href="http://www.naver.com" id="link2">Link2</a>
+
+    <a href="http://www.naver.com" id="link1">Naver</a>
+    <a href="http://www.naver.com" id="link2">Naver</a>
+
     <script>
         $('#link1').click(function(){
-            alert("link1클릭");
-        });
-        /*
-            event.preventDefault();
-            -> 현재 이벤트의 기본동작 href를 중단
-        */
+            alert("link1클릭")
+        })
         $('#link2').click(function(event){
             event.preventDefault();
-            alert("link2클릭");
-        });
+            alert("link2클릭")
+        })
+        
+
+
     </script>
 </body>
+
 </html>
-
-
-
-
-

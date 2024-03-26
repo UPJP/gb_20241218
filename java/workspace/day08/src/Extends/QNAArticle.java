@@ -1,28 +1,21 @@
 package Extends;
 
-public class QNAArticle extends Article{
-	private String answer;	// 답변
+public class QNAArticle extends Article {
+	private String Answer;
 
 	public String getAnswer() {
-		return answer;
+		return Answer;
 	}
 
 	public void setAnswer(String answer) {
-		this.answer = answer;
+		Answer = answer;
 	}
 
 	@Override
 	public String toString() {
-		return "질문/답변 게시판 [ 글번호=" + getNum()
+		return "QNAArticle [글번호= " + getNum()
 				+ ", 글제목=" + getTitle()
-				+ ", 답변=" + answer + "]";
+				+ " 답변=" + Answer + "]";
 	}
 	
-	
 }
-
-
-
-
-
-

@@ -6,32 +6,28 @@
     <title>Document</title>
 </head>
 <body onload="authNo()">
-    <p>
+   <p>
         고객님의 인증번호는 <strong id="auth">00000</strong>입니다
-    </p>
-    <input type="button" value="인증번호 새로 받기"
-        onclick="refresh()">
+   </p>
+   <input type="button" value="인증번호 새로 받기"
+    onclick="refresh()">
     <script>
         function refresh(){
-            // 페이지 새로고침
+            //페이지 새로고침
             location.reload();
         }
         function authNo(){
-            let value = "";
-            for( let i=0; i<5; i++ ){
-                value += random(0,9);
+            //random 사용하여 0~9사이의 랜덤 숫자  5개 채우기
+            function random(n1,n2){
+                return parseInt( Math.random() *(n2 -n1 +1 ) )+n1
             }
-            document.getElementById("auth").innerHTML = value;
+            let sng =""
+            for(let i=1; i<6; i++){
+                sng+= random(0,9)
+            }
+            document.getElementById("auth").innerHTML = sng;
         }
-        function random(n1, n2){
-            return parseInt(Math.random() * (n2 - n1 + 1)) + n1;
-        }
+
     </script>
 </body>
 </html>
-
-
-
-
-
-

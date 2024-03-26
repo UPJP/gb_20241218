@@ -1,24 +1,13 @@
 package loop;
 
-public class Main03 {
-
+public class main03 {
 	public static void main(String[] args) {
-		// 구구단 7단, while문
-		int j = 0;
-		int i = 100;
-		
-		while(i<10) {
-			j = 7 * i;
-			System.out.println(j);
+		int a = 0;
+		int i = 1;
+		while (i < 10) {
+			a = 7 * i;
 			i++;
+			System.out.println(a);
 		}
-		
 	}
-
 }
-
-
-
-
-
-

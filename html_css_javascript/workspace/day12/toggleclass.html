@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    p {
+        margin: 4px;
+        font-size:16px;
+        font-weight:bolder;
+        cursor:pointer;
+    }
+    .blue {
+        color:blue;
+    }
+    .highlight {
+        background:yellowgreen;
+    }
+</style>
+<body>
+    <p class="blue">Click to toggle</p>
+    <p class="blue highlight">highlight</p>
+    <p class="blue">Click to toggle</p>
+    <p class="blue">Click to toggle</p>    
+</body>
+<script>
+    $('p').click(function(){
+        $(this).toggleClass('highlight');
+    });
+</script>
+</html>
+
+
+
+

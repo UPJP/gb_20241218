@@ -1,26 +1,16 @@
 package thread;
 
-public class Account {
+public class Account  {
 	int balance = 2000;
 	
 	public void withdraw(int money) {
-		if(balance >= money) {
+		if (balance >= money) {
 			try {
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			}catch (InterruptedException e) {
-				e.printStackTrace();
+			e.printStackTrace();
 			}
 			balance -= money;
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-

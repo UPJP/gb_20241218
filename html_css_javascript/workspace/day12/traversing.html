@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+</head>
+<body>
+    <ul id="first">
+        <li class="class1">list item1</li>
+        <li>list item2</li>
+        <li class="class2">list item3</li>
+    </ul>
+    <ul id="second">
+        <li class="class1">list item1</li>
+        <li>list item2</li>
+        <li class="class2">list item3</li>
+    </ul>
+    <script>
+        $("#first").find(".class1")
+                .css('background-color','tomato').end()
+                .find(".class2")
+                .css('background-color','green');
+    </script
+</body>
+</html>
+
+
+
+
+

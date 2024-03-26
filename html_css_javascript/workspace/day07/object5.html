@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
-        let member = {
-            list    : { aaa : 10, bbb : 20, ccc : 30 },
-            show    : function(){
-                document.write('hello world');
-            }
-        };
-        console.log(member.list);
-        console.log(member['list']);
-        console.log('-------------');
-        console.log(member.list.bbb);
-        console.log(member['list']['bbb']);
-        console.log('===============');
-        console.log(member['show']())
-        console.log(member.show())
-    </script>    
+  <script>
+    let member = {
+      list: { aaa: 10, bbb: 20, ccc: 30 },
+      show: function () {
+        document.write("hello wrold");
+      }
+    };
+    console.log(member.list);
+
+    console.log(member['list']);
+
+    console.log(member.list.bbb);
+    console.log(member['list']['bbb']);
+    console.log("===================================")
+    console.log(member['show']());
+    console.log(member.show());
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

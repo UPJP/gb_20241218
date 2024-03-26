@@ -1,42 +1,45 @@
 package object;
 
 class Character{
-	// 멤버변수만 선언
+	//맴버변수 선언
 	String name;
-	int age;
+	int age; 
 	String job;
+	
 }
-
-public class Main02 {
-
+public class main02 {
+	
 	public static void main(String[] args) {
-		// character 클래스를 가지고 객체2개 생성 후,
-		// 각 객체별 name,age,job을 할당 후 출력
-		Character ch1 = new Character();
-		ch1.name = "둘리";
-		ch1.age = 19;
-		ch1.job = "공룡";
+	// character 클래스를 가지고 객체2개 생성 후,
+    // 각 객체별  name,age,job을 할당 후 출력
+	
+		Character std1 = new Character();
+		Character std2 = new Character();
+		Character std3 = new Character();
 		
-		Character ch2 = new Character();
-		ch2.name = "김자바";
-		ch2.age = 20;
-		ch2.job = "학생";
+		std1.name = "이순신";
+		std1.age  =  30;
+		std1.job  = "장군";
 		
-		System.out.println("이름 : " + ch1.name 
-					+ " 나이 : " + ch1.age 
-					+ " 직업 : " + ch1.job);
-
-		System.out.println("이름 : " + ch2.name 
-					+ " 나이 : " + ch2.age 
-					+ " 직업 : " + ch2.job);
+		std2.name = "리 븐";
+		std2.age  =  27;
+		std2.job  = "사기";
+		
+		std3.name = "카 밀";
+		std3.age  =  47;
+		std3.job  = "검사";
+		
+		
+		System.out.println("이름 : "+std1.name);
+		System.out.println("나이 : "+std1.age);
+		System.out.println("직업 : "+std1.job+"\n");
+		
+		System.out.println("이름 : "+std2.name);
+		System.out.println("나이 : "+std2.age);
+		System.out.println("직업 : "+std2.job+"\n");
+		
+		System.out.println("이름 : "+std3.name);
+		System.out.println("나이 : "+std3.age);
+		System.out.println("직업 : "+std3.job);
 	}
-
 }
-
-
-
-
-
-
-
-

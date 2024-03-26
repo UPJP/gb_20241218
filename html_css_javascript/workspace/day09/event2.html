@@ -7,20 +7,16 @@
 </head>
 <body onload="insertQuestion()">
     <h1 id="question"></h1>
-
     <script>
         function insertQuestion(){
-            let q  = prompt("사칙연산의 수식을 입력하세요.(예:100+50)");
+            //입력값을 받는 메세지 창
+            let q = prompt("사칙연산의 수식을 입력하세요. (예: 100 + 50)");
+            // 사칙연산을 해주는 변수
             let answer = eval(q);
-            let result = q + "=" + answer;
-            document.getElementById("question").innerHTML = result;
+            let result = q+ "=" +answer
+            document.getElementById("question").innerHTML=result;
         }
+
     </script>
 </body>
 </html>
-
-
-
-
-
-

@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>        
-        const person = {
-            name    : "김자바",
-            age     : 20
-        };
-        person.location = "한국";
-        person.name = "김디비";
-        console.log(person);
+  <script>
+    const person= {
+        name : "김자바",
+        age  : 20
 
-        person.name = null;
-        console.log(person);
+    };
+    //파라미터는 수정해도 오류 발생 X 
+    person.location = "한국";
+    person.name = "김디비";
+    console.log(person)
 
-        
-        // person = {
-        //     age : 20
-        // };
-    </script>    
+    person.name = null;
+    console.log(person);
+
+    //오류
+    // person= {
+    //   age : 20
+    // }
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

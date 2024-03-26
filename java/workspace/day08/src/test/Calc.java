@@ -1,43 +1,40 @@
-package test;
+package Test;
 
 public class Calc {
-	String name;
+	private String name;
+
 	public Calc(String name) {
 		super();
 		this.name = name;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	public int plus(int x, int y) {
-		return x + y;
+	public int plus(int num1 ,int num2) {
+		return num1 + num2;
 	}
-	public int minus(int x, int y) {
-		return x - y;
+	public int minus(int num1 ,int num2) {
+		return num1 - num2;
 	}
-	public int times(int x, int y) {
-		return x * y;
+	public int times(int num1 ,int num2) {
+		return num1 * num2;
 	}
-	public int divide(int x, int y) {
+	public int divide(int num1 ,int num2) {
 		int result = 0;
-		if( y != 0) {
-			result = x / y; 
-		}
-		return result;
+		if(num2 != 0){
+			return num1 / num2;
+		}return result;
 	}
-	
+	public int divi(int num1 ,int num2) {
+		int result = 0;
+		if(num2 != 0){
+			return num1 % num2;
+		}return result;
+	}
 }
-
-
-
-
-
-
-
-
-
-

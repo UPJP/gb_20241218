@@ -1,0 +1,73 @@
+package project;
+//계좌 서비스 
+import java.util.Scanner;
+
+public class Account {
+	//인스턴스 변수
+	private static String SocialNumber; 	//주민번호
+	private static String accountNumber;   //계좌번호
+	private static String account;         //성함
+	private static String pwd;  			//비밀번호
+	private static int bin; 				//잔고
+	
+	public Account(String socialNumber, String accountNumber, String account, String pwd, int bin) {
+		super();
+		SocialNumber = socialNumber;
+		this.accountNumber = accountNumber;
+		this.account = account;
+		this.pwd = pwd;
+		this.bin = bin;
+	}
+	public Account(String socialNumber, String accountNumber, 
+			String account, String pwd) {	
+		this(socialNumber,accountNumber,account,pwd,0);
+	}
+	public void setSocialNumber(String socialNumber) {
+		SocialNumber = socialNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public void setBin(int bin) {
+		this.bin = bin;
+	}
+
+	public static void crateAccount() {
+		
+	}
+	public static void printAccount() {
+		System.out.printf("이름 : %s ,계좌번호 : %s , 주민등록번호 : %s , 잔고 : %,d원%n"
+							,SocialNumber,accountNumber,account,bin);
+	}
+	
+	public String  Account_to() {
+		return "은행서비스 [성함="+ account + 
+				",주민번호=" + SocialNumber + 
+				", 계좌번호=" + accountNumber + 
+				", 비밀번호=" + pwd + 
+				", 잔고=" + bin + "]";
+	}
+	
+	public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+	public void deposit(int binPlus2) {
+		this.bin += binPlus2;
+		
+	}
+
+	
+
+	
+	
+}

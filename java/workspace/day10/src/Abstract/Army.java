@@ -1,45 +1,19 @@
 package Abstract;
 
-public class Army extends Unit{
+public class Army extends Unit {
 
 	public Army(String name) {
 		super(name);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void attck() {
-		System.out.println(this.getName() 
-								+ ">>육상공격");
+		System.out.println(super.getName() + ">>육상 공격 ");
 	}
-	@Override
+
 	public void move() {
-		System.out.println(this.getName() 
-								+ ">>육상이동");
+		System.out.println(super.getName() + ">>육상이동");
 	}
-	
-	
-	/*
-	 * 1. Unit class 상속
-	 * 2. 메소드 재 구현
-	 *    attack() 	-> 이름(Unit 생성자) + ">>육상공격" 
-	 *    move() 	-> 이름(Unit 생성자) + ">>육상이동"
-	 */
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

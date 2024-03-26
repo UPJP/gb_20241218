@@ -8,25 +8,15 @@ public class Main03 {
 		// 상수
 		final double PI = 3.14D;
 		
-		System.out.println("width = " + width);
-		System.out.println("PI = " + PI);
-		
-		// 값의 변경
+		System.out.println("width : " + width);
+		System.out.println("PI : " + PI);
+
+		//값의 변경
 		width = 200;
-		// 상수는 재할당 불가
-		//PI = 3.151528D;
-		
-		System.out.println("width = " + width);
-		System.out.println("PI = " + PI);
+		//상수(final)은 재할당 불가
+	//	PI = 3.151528D;
+		System.out.println("width : " + width);
+		System.out.println("PI : " + PI);
 	}
 
 }
-
-
-
-
-
-
-
-
-	

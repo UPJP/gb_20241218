@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
-        // this : 내가 속해있는 객체를 가르키는 객체
-        let member = {
-            list    : { aaa : 10, bbb : 20, ccc : 30 },
-            show    : function(){
-                console.log(this.list);
-            }
-        };
-        member.show();
+  <script>
+    //this : 내가 속해있는 객체를 가르키는 객체 
+      let member = {
+      list: { aaa: 10, bbb: 20, ccc: 30 },
+      show: function () {
+        console.log(this.list); 
+      }
+    };
+    member.show()
+  </script>
 
-
-    </script>    
 </body>
+
 </html>
-
-
-
-
-
-

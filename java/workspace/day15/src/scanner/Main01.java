@@ -3,7 +3,6 @@ package scanner;
 import java.util.Scanner;
 
 public class Main01 {
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
@@ -20,23 +19,7 @@ public class Main01 {
 		System.out.println("String 결과 : " + s);
 		
 		scanner.close();
-	}
-
+			
+			
+		}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

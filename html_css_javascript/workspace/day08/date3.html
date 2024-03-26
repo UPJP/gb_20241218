@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        // 날짜 객체
-        let theday = new Date(2023, 11, 18);    // 개강일
+
+        let theday = new Date(2023,11,18); //개강일
         let today = new Date();
+
+        let cnt = today - theday;  
         // 두 날짜사이의 차를 1/1000초의 형태로 리턴
-        let cnt = today - theday;   
-        // document.write(cnt);
-        let day = Math.floor(cnt / (24*60*60*1000));
-        document.write("<h1>개강일로 부터 " + day 
-            + "일 지났습니다. </h1>");
-    </script>    
+        let day = Math.floor(cnt / (24*60*60*1000))
+
+        document.write("개강일로부터 지난일 : "+  day);
+
+      
+
+
+    </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

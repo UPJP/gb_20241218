@@ -1,38 +1,15 @@
 package hiding;
 
-public class Main02 {
-
+public class main02 {
 	public static void main(String[] args) {
-		Article a1 
-			= new Article(1, "자바게시물1", "javabeans란?", 
-						"자바학생", 123, "2023-12-26");
-		System.out.println(a1.toString());
+		Aritticle c = new Aritticle(1,"자바게1","자바빈즈란","자바학생",123,"2023-12-26");
+//		System.out.println(c.getSeq());
+//		System.out.println(c.getSubject());
+//		System.out.println(c.getConent());
+//		System.out.println(c.getWriter());
+//		System.out.println(c.getHit());
+//		System.out.println(c.getRegData());
+		System.out.println(c.toString());
 		
-		
-//		System.out.println(a1.getSeq());
-//		System.out.println(a1.getSubject());
-//		System.out.println(a1.getConent());
-//		System.out.println(a1.getWriter());
-//		System.out.println(a1.getHit());
-//		System.out.println(a1.getRegDate());
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

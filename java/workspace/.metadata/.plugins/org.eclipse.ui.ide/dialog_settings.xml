@@ -5,12 +5,28 @@
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
 	</section>
-	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="299"/>
-		<item key="DIALOG_Y_ORIGIN" value="332"/>
-	</section>
-	<section name="WORKBENCH_SETTINGS">
-		<list key="ENABLED_TRANSFERS">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\kitcoop\Desktop\day15"/>
+			<item value="D:\gb_mj_1218\JAVA\workspace\day155 java"/>
+			<item value="D:\gb_mj_1218\JAVA\workspace\day01 java"/>
+			<item value="D:\gb_mj_1218\JAVA\workspace\day14"/>
+			<item value="C:\Users\kitcoop\Desktop\day14 (2)"/>
+			<item value="C:\Users\kitcoop\Desktop\day14"/>
+			<item value="C:\Users\kitcoop\Desktop\day13\day13"/>
+			<item value="C:\Users\kitcoop\Desktop\TEST[48]"/>
+			<item value="C:\Users\kitcoop\Desktop\day12"/>
+			<item value="D:\gb_mj_1218\JAVA\day10\day1110"/>
 		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
 	</section>
 </section>

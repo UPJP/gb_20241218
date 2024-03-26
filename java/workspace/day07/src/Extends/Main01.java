@@ -1,27 +1,13 @@
 package Extends;
 
-public class Main01 {
-
+public class main01 {
 	public static void main(String[] args) {
-		CalcParent calcP = new CalcParent();
-		System.out.println(calcP.plus(20, 10));
+
+		Calcparent cc = new Calcparent();
+		System.out.println(cc.plus(20, 10));
 		
-		CalcChild clacC = new CalcChild();
-		System.out.println(clacC.times(20, 10));
-		System.out.println(clacC.plus(20, 10));
+		Calcchild cd = new Calcchild();
+		System.out.println(cd.times(20, 10));
+		System.out.println(cd.plus(20, 10));
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

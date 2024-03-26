@@ -6,23 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <script> // 15분까지
-        // 가위,바위,보 게임에서 랜덤으로 가위바위보를 출력
-        let arr = ["가위","바위","보"];
-        function getGame(){
-            let i = Math.floor(Math.random() * 3);
-            document.write("<h1>" + Math.random() * 3 + "</h1>");
-            document.write("<h1>" + Math.floor(Math.random() * 3) 
-                                    + "</h1>");
-            document.write(arr[i]);
-        }
-        getGame();
-    </script>    
+    <input type="text">
+    <input type="button" value="출력">
+    <script>
+    let arr =["가위","바위","보"];
+    function getGame(){
+    let i = Math.floor(Math.random()*3);
+    document.write(arr[i])
+    }
+    getGame();
+    
+    </script>
 </body>
 </html>
-
-
-
-
-
-

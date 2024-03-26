@@ -1,0 +1,101 @@
+package project;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class AccountService  {
+	//객체 배열 지정
+	static Account[] member = new Account[100];
+	static int index = 0;
+
+	public static void CreateAccount() {
+		Scanner scanner = new Scanner(System.in);
+		boolean cahm = false;
+		
+		String socialNumber = "";
+		String accountNumber = "";
+		String account = "";
+		String pwd = "";
+		
+		
+		System.out.println("계좌개설을 실행합니다.");
+
+		// 주민번호 만들기
+		while (!cahm) {
+			cahm = false;
+			System.out.println("주민번호를 입력해주세요");
+			 socialNumber = scanner.nextLine();
+			if (!Pattern.matches("^[0-9]*$", socialNumber)) {
+				System.out.println("올바른 주민번호를 입력해주세요");
+			}else if(isid(socialNumber)){
+				System.out.println("중복된 주민번호 입니다.");
+				return;
+			} else {
+				cahm = true;
+			}
+		}
+		cahm = false;
+
+		// 계좌번호 만들기 정규표현식 바꿀껏 나중에
+		while (!cahm) {
+			System.out.println("계좌번호를 입력해주세요");
+			accountNumber = scanner.nextLine();
+			if (!Pattern.matches("^[0-9]*$", accountNumber)) {
+				System.out.println("올바른 주민번호를 입력해주세요");
+			} else {
+				cahm = true;
+			}
+		}
+		cahm = false;
+
+		// 은행명 입력 === 이름으로 고침
+		while (!cahm) {
+			System.out.println("이름을 입력해주세요");
+			 account = scanner.nextLine();
+			if (!Pattern.matches("^[0-9]*$", account)) {
+				System.out.println("한국명 이름만 가능합니다.");
+			} else {
+				cahm = true;
+			}
+		}
+		cahm = false;
+
+		// 비밀번호 생성
+		while (!cahm) {
+			System.out.println("비밀번호룰 입력해주세요");
+			 pwd = scanner.nextLine();
+			if (!Pattern.matches("^[0-9]*$", pwd)) {
+				System.out.println("올바른 주민번호를 입력해주세요");
+			} else {
+				cahm = true;
+			}
+		}
+		try {
+			Account ac = new Account(socialNumber, accountNumber, account, pwd);
+			member[index++]= ac;
+			System.out.println("계좌가 생성되었습니다.");
+			System.out.println(ac.Account_to()); // 계좌 정보 출력					
+		} catch (Exception e) {
+			System.out.println("에러발생");
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	//자동 객체배열 생성 완성
+	public static void all_Account() {
+		for(int i =0 ; i<index; i++) {
+			member[i].printAccount();
+		}
+	}
+	
+	private boolean isId(String socialNumber) {
+        boolean returnValue = false;
+        for (int i = 0; i < index; i++) {
+            if (member[i].getAccountNumber().equals(socialNumber))  {
+                returnValue = true;
+            }
+            ;
+        }
+        return returnValue;
+    }
+}

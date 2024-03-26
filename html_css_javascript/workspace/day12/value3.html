@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <form id="myform">
+        <label>
+            
+            <input type="radio" name="subject" value="html">HTML
+        </label>
+        <label>
+            <input type="radio" name="subject" value="css">CSS
+        </label>
+        <label>
+            <input type="radio" name="subject" value="Javascript">Javascript
+        </label>
+        <hr/>
+        <button id="sss">입력값 확인</button>
+    </form>
+    <script>
+        $("#myform").submit(function (e) {
+            e.preventDefault();
+
+            let subjcet = $("input[name='subject']:checked").val();
+            //subjcet validation check
+            if (!subjcet) {
+                alert("선택된 항목이 없습니다.")
+                return false()
+            }
+            alert("선택한과목은 " + subjcet + "입니다 ");
+
+            // subject 과목 선택, -> alert("선택한과목은 "+  +"입니다 ")
+
+        });
+    </script>
+</body>
+
+</html>

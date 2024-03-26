@@ -1,0 +1,103 @@
+package project;
+
+//메인화면 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+		try {
+			boolean Exit = false;
+			Scanner scanner = new Scanner(System.in);
+
+			do {
+				Scanner scan = new Scanner(System.in);
+				System.out.println("==== Java 은행 메뉴 시스템  ====");
+				System.out.println("1.계좌서비스");
+				System.out.println("2.은행시스템");
+				System.out.println("3.팩스서비스");
+				System.out.println("4.카드서비스");
+				System.out.println("5.대출서비스");
+				System.out.println("6.기타서비스");
+				System.out.println("7.종료");
+				System.out.println("항목을 입력해주세요");
+
+				int menu;
+				try {
+					menu = scan.nextInt();
+				} catch (InputMismatchException e) {
+					System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");
+					scan.next();
+					continue;
+				}
+				switch (menu) {
+				case 1:
+					System.out.println("계좌개설을 시작합니다.");
+					AccountService.CreateAccount();
+					break;
+
+				case 2: // 은행시스템
+					boolean bankingExit = false;
+					do {
+						Scanner scan2 = new Scanner(System.in);
+						System.out.println("==== 은행 서비스 관리 시스템 ====");
+						System.out.println("1.계좌검색");
+						System.out.println("2.모든 계좌 ");
+						System.out.println("0.취소");
+
+						try {
+							int banking_menu = scan2.nextInt();
+							switch (banking_menu) {
+							case 1:// 고객계좌 조회
+								BankingSystem.find_Account();
+								break;
+
+							case 2:// 모든 계좌 검색
+								System.out.println("모든 계좌를 출력합니다.");
+								AccountService.all_Account();
+								break;
+
+							case 3: // 해당 계좌 입금
+								break;
+
+							case 4: // 해당 계좌 출금
+								break;
+
+							case 0:
+								bankingExit = true;
+								break;
+							}
+						} catch (InputMismatchException e) {
+							System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");
+							scan2.next();
+						}
+					} while (!bankingExit);
+					break;
+
+				case 3: // 팩스서비스
+					break;
+
+				case 4: // 카드서비스
+					break;
+
+				case 5: // 대출서비스
+					break;
+
+				case 6: // 기타서비스
+					break;
+
+				case 7: // 종료
+					System.out.println("종료합니다.");
+					Exit = true;
+					scan.close();
+					break;
+				}
+			} while (!Exit);
+		} catch (Exception e) {
+			System.out.println("오류");
+			e.printStackTrace();
+			
+		}
+	}
+}

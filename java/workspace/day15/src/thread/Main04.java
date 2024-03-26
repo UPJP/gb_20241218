@@ -1,10 +1,9 @@
 package thread;
 
 public class Main04 {
-
 	public static void main(String[] args) {
-		ThreadInterruptTest th 
-			= new ThreadInterruptTest();
+		ThreadInterruptTest th
+			=new ThreadInterruptTest();
 		th.start();
 		
 		// 3초후에 인터럽트
@@ -14,20 +13,5 @@ public class Main04 {
 			e.printStackTrace();
 		}
 		th.interrupt();
-		
-		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

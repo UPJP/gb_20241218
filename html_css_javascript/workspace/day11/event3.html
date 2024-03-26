@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
-    .event-box{
-        border: 5px solid blue;
-        background: lightgray;
-        color: blue;
-        padding: 50px 0;
-        text-align: center;
+       .event-box {
+        font-size: 20px;     padding: 20px 10px;
+        margin: 10px auto;   display: block;
+        text-align: center;  width: 500px;
     }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<body>
-    <div id="mouseEvent" class="event-box">
-        Mouse Here!!
+    <div id ="mosueEvent" class="event-box">
+        mosue HERE!
     </div>
+
     <script>
-        $("#mouseEvent").mouseenter(function(){
-            $("#mouseEvent").html("Mouse Enter");
-        });
-        // mouseleave,  Mouse Leave
-        $("#mouseEvent").mouseleave(function(){
-            $("#mouseEvent").html("Mouse Leave");
-        });
-        // mousedown,   Mouse Down
-        $("#mouseEvent").mousedown(function(){
-            $("#mouseEvent").html("Mouse Down");
-        });
-        // mouseup,     Mouse Up
-        $("#mouseEvent").mouseup(function(){
-            $("#mouseEvent").html("Mouse Up");
-        });
+        $('#mosueEvent').mouseenter(function(){
+            $('#mosueEvent').html("Mouse Enter")
+        })
+        $('#mosueEvent').mouseleave(function(){
+            $('#mosueEvent').html("Mouse Leave")
+        })
+        $('#mosueEvent').mousedown(function(){
+            $('#mosueEvent').html("Mouse Down")
+            
+        })
+        $('#mosueEvent').mouseup(function(){
+            $('#mosueEvent').html("Mouse up")
+        })
+        
+
     </script>
 </body>
+
 </html>
-
-
-
-
-
-

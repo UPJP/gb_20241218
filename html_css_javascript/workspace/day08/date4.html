@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body onload="startTimer()">
-    <h1 id="timer">   </h1>
+    <h1 id ="timer"> sd </h1>
+
 
 
     <script>
-        function printTime(){
-            let days = ["일","월","화","수","목","금","토"];
+        function printTime() {
+
             let mydate = new Date();
+            let days = ["일", "월", "화", "수", "목", "금", "토"];
+
             let yy = mydate.getFullYear();
             let mm = mydate.getMonth() + 1;
             let dd = mydate.getDate();
             let i = mydate.getDay();
-            let day = days[i];
+            let day =days[i]
             let hh = mydate.getHours();
             let mi = mydate.getMinutes();
             let ss = mydate.getSeconds();
 
             // 완성된 현재시각
-            let result = yy + "-" + mm + "-" + dd + " "
-                + day + "요일" + hh + ":" + mi + ":" + ss;
+            let result = yy + "-" + mm + "-" + dd + " " 
+                        + day + " " + hh + ":" + mi + ":" + ss;
 
-            // id속성값이 timer인 요소에게 결과를 출력
-            document.getElementById("timer").innerHTML = result;
+            //id 속성값이 timer인 요소에게 결과를 출력
+            document.getElementById("timer").innerHTML=result;
         }
         function startTimer(){
-            // 1초에 한번씩 printTime 함수를 호출해
-            setInterval(printTime, 1000);
+            //1초에 한번씩 printTime 함수를 호출
+            setInterval(printTime,1000);
         }
-    </script>    
+
+
+
+    </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

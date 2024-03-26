@@ -21,6 +21,8 @@
     <script>
         document.getElementById('eventA').addEventListener('click',function(event){
             if( document.getElementById('eventCheck').checked ){
+
+                //주로 이벤트의 기본 동작을 취소하거나 막기위한 메서드
                 event.preventDefault();
             }
         });

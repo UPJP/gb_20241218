@@ -1,9 +1,8 @@
 package Extends;
 
-public class Article {
-	private int num;		// 글 번호
-	private String title;	// 글 제목
-	
+public class Article{
+	private int num;
+	private String title;
 	public int getNum() {
 		return num;
 	}
@@ -16,8 +15,9 @@ public class Article {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Article [num=" + num + ", title=" + title + "]";
+	}
 	
 }

@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    .event-box {
+        font-size: 20px;
+        padding: 20px 10px;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+        width: 500px;
+    }
+
+    .input {
+        border: 5px solid #007;
+        background: #d5d5d5;
+        color: #009;
+    }
+
+    .console {
+        border: 5px solid #a0a;
+        background: #d5d5d5;
+        color: #505;
+    }
+</style>
+
 <body>
     <h1>on()</h1>
     <p>여기를 클릭해주세요</p>
+
     <script>
-        $("p").on("click",function(){
-            alert("문장이 클릭 되었습니다. ");
+        //ready event : HTML 렌더링이 완료 된 후 호출
+        $(document).bind('ready', function () {
+            function clickHandler(e) {
+                alert("hello javascript");
+            }
+            $('#click_me').bind('click', clickHandler);
+
+
         });
     </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

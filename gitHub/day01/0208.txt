@@ -1,0 +1,103 @@
+1. GIT  = Version Control System
+ 1-1. git 
+ - 오픈소스 버전관리 시스템 
+ - 로컬에서 버전관리 
+ - 소프트웨어 개발 및 소스 코드 관리에 사용
+ - 버전 관리 프로그램
+
+ 1-2. github 
+ - 클라우드 서버를 사용해서 로컬에서 버전 관리한 소스코드를 업로드하여 공유가능
+ - 원경 저장소
+ - git
+
+2. Git 설치
+
+3. SourceTree
+ - Git을 GUI로 다룰 수 있도록 해주는 툴이다
+ - https://www.sourcetreeapp.com/ 
+
+4. Git을 사용하는 방법
+ - 터미널에 명령어를 이용하는 CLI방식
+ 	->Command Line Interface
+ - 소스트리 등의 프로그램을 사용하는 GUI방식
+	->Graphic User Interface
+
+5. Git 설정 & 프로젝트 관리 시작하기
+ - git 전역으로 사용할 이름과 이메일 주소를 설정
+ - github 계정과는 별개
+	git config --global user.name 
+	"본인이름"
+	git config --global user.email 
+	"본인이메일"
+ - git 계정, 이메일 확인
+
+- 기본 브랜치명 변경
+  git config --globla init.defaultBranch main
+
+
+ - git init
+	-> git이 관리하라고 명령을 내림
+ 	-> 현재 디렉토리를 git의 저장소로 만듭니다
+	-> .git 폴더가 생성이된다 .git을 지우면 git으로 관리하는 내용이 나라간다
+
+- git status
+	-> git 프로젝트 폴더의 상태를 확인
+	-> Untracked : Git이 해당 파일을 추적 및 관리하지 않은 상태
+	-> Tracked: GIt이 해당 파일을 추적 및 관리하는 상태
+
+6. git ignore
+ - 포함할 필요가 없을 때 
+	-> 자동으로 생성 또는 다운로드 되는 파일들 
+	( 빌드 결과물 (*.class),라이브러리)
+ - 포함하지 말아야 할때
+	-> 보안상 민감한 정보를 담은 파일
+ - .gitignore 파일을 사용해서 배제할 요소들을 지정할수 있다
+	https://git-scm.com/docs/gitignore
+7. git의 변화넣기
+ - 파일 하나 담기
+ 	->git add tigers.txt
+ - 모든 파일 담기
+	-> git add .
+8. commit
+ - commit은 의미있는 변경 작업들을 저장소에 기록하는 동작
+
+ - git commit
+
+ -명령어	
+
+9. git log
+ - git의 모든 history 조회
+
+**명렁	
+
+10. git diff
+ - 변경사항을 좀더 구체적으로 알려준다.
+
+
+11. add 와 commit 한번에
+ - 단, 새로 추가된 (untracked)파일이 없을때 한정
+ - git commit -am "메세지를 추가"
+
+12. commit 할때 메세지까지 한꺼번에 추가
+ - git commit -m "메세지 입력"
+
+13. git 에서 과거의 시점으로 돌아가는 두 방식
+ - reset : 원하는 시점으로 돌아간 뒤 이후 내역을 지운다
+ - revert  : 되돌리기 원하는 시점의 커밋을 꺼꾸로 실행
+
+-  git reset --hrad " 커밋 복사 "
+-  git reset --hrad 
+	-> 뒤에 커밋 해시가 없으면 마지막 커밋을 가리킴
+
+
+- git revert (돌아갈 커밋 해시 ) 
+add George에 있는 변화만 골라서 제거 , 다른 과정 유지
+
+git revert --continue 
+	->  revert 그대로 진행
+
+ - revert 명렁어를 사용하면 자동 commit까지 이루어진다.
+ commit은 하지 않고 revert 하기, 원하는 다른 작업을 추가한 다음에 함께 커밋
+git revert --no --commit(되돌릴 커밋 해시)
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

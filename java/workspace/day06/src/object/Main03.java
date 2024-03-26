@@ -8,24 +8,27 @@ class HelloWorld{
 	}
 	void setEng() {
 		message = "Hello java";
+		
 	}
 	void setKor() {
 		message = "안녕하세요. 자바";
 	}
 }
 
-public class Main03 {
-
+public class main03 {
+	
 	public static void main(String[] args) {
+	
 		HelloWorld hw = new HelloWorld();
-		
 		hw.setKor();
 		hw.sayHello();
-		System.out.println("---------------------");
+		
+		System.out.println("==================");
 		
 		hw.setEng();
 		hw.sayHello();
-		System.out.println("---------------------");
+		
+		System.out.println("==================");
 		
 		hw.setEng();
 		hw.setKor();
@@ -35,26 +38,5 @@ public class Main03 {
 		hw.setEng();
 		System.out.println(hw.message);
 		
-		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

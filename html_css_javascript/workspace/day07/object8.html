@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <script>
-        let person = {
-            name : "김자바",
-            age  : 25,
-            say  : function(){
-                console.log(`안녕하세요, 나는 ${this.name}`);
-            }
-        };
-        //person.say();
-        //console.log( person.gender );
+  <script>
+    let person  ={
+      name : "김자바",
+      age  : 25,
+      say  : function(){
+        console.log(`안녕하세요, 나는 ${this.name}`);  
+      }
+    }
+    // person.say();
+    console.log(person.gender);
+    console.log(`name : ${"name" in person}`);
+    console.log(`age : ${"age" in person}`);
+    console.log(`gender : ${"gender" in person}`);
+  </script>
 
-        console.log(`name : ${"name" in person}`);
-        console.log(`age : ${"age" in person}`);
-        console.log(`gender : ${"gender" in person}`);
-
-    </script>    
 </body>
+
 </html>
-
-
-
-
-
-
-

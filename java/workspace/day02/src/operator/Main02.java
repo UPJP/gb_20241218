@@ -1,25 +1,18 @@
 package operator;
 
-public class Main02 {
-
+public class main02 {
 	public static void main(String[] args) {
 		int source = 100;
 		
-		source += 100;	// source = source + 100; 200 
-		source -= 50;	// source = source - 50; 150
-		source *= 2;	// source = source * 2; 300
-		source /= 100;	// source = source / 100; 3
-		source %= 2;	// source = source % 2; 1
-		
-		// 결과는? 
+		source += 100; // x + 100 ; 200 
 		System.out.println(source);
-		
+		source -= 50;  // x - 50  ; 150
+		System.out.println(source);
+		source *= 2;   // x * 2   ; 300
+		System.out.println(source);
+		source /= 100; // x / 100 ; 3
+		System.out.println(source);
+		source %= 2;   // x & 2   ; 1
+		System.out.println(source);
 	}
-
 }
-
-
-
-
-
-

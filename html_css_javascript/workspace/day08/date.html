@@ -7,32 +7,32 @@
 </head>
 <body>
     <script>
-        let mydate = new Date();
-        // 년, 월, 일 리턴받기
-        let yy = mydate.getFullYear();
-        // 월은 0부터 시작한다. 그러므로 1을 증가
-        let mm = mydate.getMonth() + 1;
-        let dd = mydate.getDate();
-        let result = yy + "-" + mm + "-" + dd;
-        document.write("<h1>" + result + "</h1>");
+        let mydate =new Date();
+        // 년 , 월 , 일 리턴받기
+        let yy =mydate.getFullYear();
+        let mm =mydate.getMonth()+1;
+        let dd =mydate.getDate();
 
-        // 요일출력 : 일요일이 0, 토요일이 6
-        let days = ["일","월","화","수","목","금","토"];
+        let result = yy + "." + mm + "." + dd ; 
+
+        document.write("<h1>"+ result+"</h1>");
+
+
+        //요일 출력
+        let days =["일","월","화","수","목","금","토"];
         let i = mydate.getDay();
-        document.write("<h1>" + days[i] + "</h1>");
+        document.write("<h1>"+ days[i]+"</h1>");
 
-        // 현재시각 출력
+        //현재시각 출력
+
         let hh = mydate.getHours();
         let mi = mydate.getMinutes();
         let ss = mydate.getSeconds();
-        let result2 = hh + ":" + mi + ":" + ss;
-        document.write("<h1>" + result2 + "</h1>");
-    </script>    
+
+        let result2 = hh + ":" + mi + ":" + ss   ; 
+        document.write("<h1>"+ result2+"</h1>");
+
+    </script>
+    
 </body>
 </html>
-
-
-
-
-
-

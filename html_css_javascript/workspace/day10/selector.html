@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
     .selected{
         background-color: tomato;
-        border: 2px solid red;
+        border:  2px solid skyblue;
     }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <body>
     <ul id="list">
         <li id="htmlId">HTML</li>
-        <li class="selectedClass">css</li>
-        <li>javascript</li>
-        <li>jsp</li>
-        <li id="oracleId">oracle</li>
+        <li class="selectedClass">CSS</li>
+        <li>JavaScript</li>
+        <li>JSP</li>
+        <li id="oracleId">Oracle</li>
     </ul>
     <script>
-        // id
+        //id    
         // $('#htmlId').addClass('selected');
-        // class
+        //class 
         // $(".selectedClass").addClass('selected');
-        // tag
+        //tage
         // $('li').addClass('selected');
         // 여러개 선택
-        // $('#htmlId, .selectedClass').addClass('selected');
-        // 여러개
-        //$("#list li").addClass('selected');
-        // 인자와 인덱스가 동일한 엘리먼트를 찾아내는 선택자
-        $("#list li:eq(2)").addClass('selected');
+        // $('#htmlId,.selectedClass').addClass('selected');
+        // 여러개 (자식)
+        // $('#list li').addClass('selected');
+        // 안자와 인덱스가 동일한 엘리먼트를 찾아내는 선택지
+        $('#list li:eq(2)').addClass("selected");
     </script>
     
 </body>
 </html>
-
-
-
-
-
-

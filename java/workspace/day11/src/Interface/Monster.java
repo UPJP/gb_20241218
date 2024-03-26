@@ -2,6 +2,7 @@ package Interface;
 
 public class Monster implements Fight, Move {
 	private String name;
+
 	public Monster(String name) {
 		super();
 		this.name = name;
@@ -9,44 +10,32 @@ public class Monster implements Fight, Move {
 
 	@Override
 	public void walk() {
-		System.out.println(this.name + ">>  걷습니다.");
+		// TODO Auto-generated method stub
+		System.out.println(this.name + ">> 걷고있습니다");
 	}
 
 	@Override
 	public void run() {
-		System.out.println(this.name + ">>  뜁니다.");
+		// TODO Auto-generated method stub
+		System.out.println(this.name + ">> 빠르게 움직입니다.");
 	}
 
 	@Override
 	public void jump() {
-		System.out.println(this.name + ">> 점프를 합니다.");
+		// TODO Auto-generated method stub
+		System.out.println(this.name + ">> 점프!");
 	}
 
 	@Override
 	public void attack() {
-		System.out.println(this.name + ">> 공격을 합니다.");
+		// TODO Auto-generated method stub
+		System.out.println(this.name + ">> 공격을 시전합니다.");
 	}
 
 	@Override
 	public void shield() {
-		System.out.println(this.name + ">> 방어를 합니다.");
+		// TODO Auto-generated method stub
+		System.out.println(this.name + ">> 몸을 웅크립니다.");
 	}
-
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,11 +1,11 @@
 package boxing;
-
 class Hello{
 	public void say() {
 		System.out.println("Hello");
 	}
 }
-class Korean extends Hello{
+
+class Kroean extends Hello{
 	@Override
 	public void say() {
 		System.out.println("안녕하세요");
@@ -16,28 +16,9 @@ class Korean extends Hello{
 }
 public class Main01 {
 	public static void main(String[] args) {
-		Hello h = new Korean();
+		Hello h = new Kroean();
 		h.say();
-		// Hello에게 정의된 기능이 아니므로 기능의 제한이 걸린다
-		// h.talk();	
-		
+		//	Hello에게 정의된 기능이 아니므로 기능의 제한이 걸린다.
+		//	h.talk();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
