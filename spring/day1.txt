@@ -18,20 +18,21 @@
  - @SpringBootAppLication 어노테이션으로 인해 스프링 부트의 자동 설정 읽기와 생성이 모두 자동으로 설정된다.
 
 6. @Controller
- - controller 에 꼭 붙여준다, conroller 에서 해당 mppng 속
+ - Controller 에 꼭 붙여준다. Controller에서 해당  mapping url을 찾는다.
 
 7. @GetMapping
  - get방식의 요청
 
 8. return "hello";
- - hello란 화면을 차아서 return
- - 스프링 부트에서 탬플릿엔진 기본 viewName매핑
-- resources:tepltes/+{ViewName} +.html
-- 컨트롤러에서 리턴 값으로 문자를 반환하면y
+ - hello란 화면을 찾아서 return
+ - 스프링 부트에서 템플릿엔진 기본 viewName매핑
+ - resources:templates/+{ViewName} + .html
+ - 컨트롤러에서 리턴 값으로 문자를 반환하면 
+ 뷰리졸버(viewResolver)가 화면을 찾아서 처리한다.
 
 9. DispatcherServlet
  - 스프링 MVC도 프론트 컨트롤러 패턴으로 구현되어 있다.
- - 그리고 스프링 MVC의 프론트 컨트롤러ㅏ 바로 디스패치 서블릿이다.
+ - 그리고 스프링 MVC의 프론트 컨트롤러가 바로 디스패치 서블릿이다.
  - DispatcherServlet  -> FrameworkSerlvet  -> HttpServletBean  ->  HttpServlet 
 
 
