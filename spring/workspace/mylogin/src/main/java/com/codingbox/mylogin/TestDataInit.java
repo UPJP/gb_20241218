@@ -16,7 +16,8 @@ public class TestDataInit {
 	
 	private final MemberRespository memberRespository;
 	private final ItemRepository itemRepository;
-	// 테스트 데이터 추가 
+	
+	// 테스트 데이터 추가
 	@PostConstruct
 	public void init() {
 		Member member = new Member();
@@ -24,9 +25,20 @@ public class TestDataInit {
 		member.setPassword("test");
 		member.setName("테스트");
 		memberRespository.save(member);
-		
-		itemRepository.save(new Item("itemA",10000,10));
-		itemRepository.save(new Item("itemB",20000,20));
+		itemRepository.save(new Item("itemA", 10000, 10));
+		itemRepository.save(new Item("itemB", 20000, 20));
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

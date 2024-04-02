@@ -10,18 +10,19 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemberRespository {
 
-	private static Map<Long, Member>store = new HashMap<>();
-	private static long sequence= 0L;
+	private static Map<Long, Member> store = new HashMap<>();
+	private static long sequence = 0L;
 	
 	public Member save(Member member) {
 		member.setId(++sequence);
-		store.put(member.getId(),member);
+		store.put(member.getId(), member);
 		return member;
 	}
 	
 	public Member findById(Long id) {
 		return store.get(id);
 	}
+	
 	public List<Member> findAll(){
 		return new ArrayList<>(store.values());
 	}
@@ -29,10 +30,22 @@ public class MemberRespository {
 	public Member findByLoginId(String loginId) {
 		List<Member> all = findAll();
 		for(Member m : all) {
-			if(m.getLoginId().equals(loginId)) {
+			if( m.getLoginId().equals(loginId) ) {
 				return m;
 			}
 		}
+		
 		return null;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

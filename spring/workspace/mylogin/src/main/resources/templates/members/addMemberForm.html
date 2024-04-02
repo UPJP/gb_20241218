@@ -23,7 +23,7 @@
 			<h2>회원 가입</h2>
 		</div>
 		<h4 class="mb-3">회원 정보 입력</h4>
-		<form action="" id="myForm" th:action th:object="${member}" method="post">
+		<form action="" id="myForm" th:action th:object="${member}"  method="post">
 			<div>
 				<label for="loginId">로그인 ID</label> 
 				<input type="text" id="loginId" th:field="*{loginId}" class="form-control"  >
@@ -34,7 +34,7 @@
 			</div>
 			<div>
 				<label for="name">이름</label> 
-				<input type="text" id="name"  th:field="*{name}" class="form-control" >
+				<input type="text" id="name" th:field="*{name}"  class="form-control" >
 			</div>
 			<hr class="my-4">
 			<div class="row">
@@ -60,11 +60,12 @@
 </body>
 <script>
 	function myValidation(){
-		let loginId= document.getElementById("loginId").value;
-		if(loginId==""){
+		let loginId = document.getElementById("loginId").value;
+		if(loginId == ""){
 			alert("아이디를 입력해주세요");
 			return false;
 		}
+		
 		document.getElementById("myForm").submit();
 	}
 </script>

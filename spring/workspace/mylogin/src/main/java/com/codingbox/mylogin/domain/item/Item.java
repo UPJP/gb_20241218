@@ -6,9 +6,9 @@ import lombok.Setter;
 @Getter @Setter
 public class Item {
 	private Long id;
-	private String itemName;   
-	private Integer price;   	//가격이 null 일수도 있기 때문에
-	private Integer quantity;	//수량이 null 일수도 있기 때문에
+	private String itemName;
+	private Integer price;		// 가격이 null일 수 있다
+	private Integer quantity;	// 수량이 null일 수 있다
 	
 	public Item(String itemName, Integer price, Integer quantity) {
 		super();
@@ -17,6 +17,15 @@ public class Item {
 		this.quantity = quantity;
 	}
 	
-	public Item(){ }
-	
+	public Item() {	}
 }
+
+
+
+
+
+
+
+
+
+

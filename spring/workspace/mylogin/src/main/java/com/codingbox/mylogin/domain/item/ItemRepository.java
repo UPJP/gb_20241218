@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ItemRepository {
-	private static final Map<Long, Item> store=new HashMap<>();
+	private static final Map<Long, Item> store = new HashMap<>();
 	private static long sequence = 0L;
 	
 	public Item save(Item item) {
@@ -35,3 +35,13 @@ public class ItemRepository {
 		findItem.setQuantity(upateParam.getQuantity());
 	}
 }
+
+
+
+
+
+
+
+
+
+
