@@ -25,7 +25,7 @@ public class JpaMain3 {
 			
 			//여기서부터 영속 상태
 			//EntityManager안에있는 영속성 컨텍스트에 관리가 된다는 뜻 
-			System.out.println("=====before====");
+			System.out.println("=====before ====");
 			em.persist(member);
 			System.out.println("=====after=====");
 			
