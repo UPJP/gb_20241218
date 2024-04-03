@@ -3,16 +3,33 @@ package com.codingbox.mylogin;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.codingbox.mylogin.filter.LogFilter;
 import com.codingbox.mylogin.filter.LoginCheckFilter;
+import com.codingbox.mylogin.interceptor.LogInterceptor;
+import com.codingbox.mylogin.interceptor.LoginCheckInterceptor;
 
 import jakarta.servlet.Filter;
 
 @Configuration
-public class webConfig {
+public class webConfig implements WebMvcConfigurer{
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(new LogInterceptor())
+				.order(1)
+				.addPathPatterns("/**")
+				.excludePathPatterns("/css/**","/error");
+
+		registry.addInterceptor(new LoginCheckInterceptor())
+				.order(2)
+				.addPathPatterns("/**")
+				.excludePathPatterns("/","memeber/add", "/login","/logout","/css/**","/error");
+			
+	}
 	
-	@Bean
+//	@Bean
 	public FilterRegistrationBean logFilter(){
 		FilterRegistrationBean<Filter> filterRegistrationBean= new FilterRegistrationBean<>();
 		// 내가 만든 LogFilter를 넣어준다
@@ -22,7 +39,7 @@ public class webConfig {
 		filterRegistrationBean.addUrlPatterns("/*");		
 		return filterRegistrationBean;
 	}
-	@Bean
+//	@Bean
 	public FilterRegistrationBean loginCheckFilter(){
 		FilterRegistrationBean<Filter> filterRegistrationBean= new FilterRegistrationBean<>();
 		filterRegistrationBean.setFilter(new LoginCheckFilter());
