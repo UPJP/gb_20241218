@@ -1,23 +1,24 @@
-package com.codingbox.jpa.entity;
+package com.codingbox.jpaitem.domain;
 
 import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//@Entity
+@Entity
 @Getter @Setter
-//@Table(name = "MBR ")
-@NoArgsConstructor
 public class Member {
 	
 	@Id
+	@GeneratedValue					// 선택안하면 AUTO
+	@Column(name = "MEMBER_ID")
 	private Long id;
 	
-	@Column(unique = true , length = 10)
 	private String name;
-	private int age; 
+	private String city; 
+	private String street;
+	private String zipcode;
 }
