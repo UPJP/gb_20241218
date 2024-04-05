@@ -1,24 +1,23 @@
 package com.codingbox.jpaitem.domain;
 
 import jakarta.persistence.Column;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 //@Entity
 @Getter @Setter
-public class Member {
-	
+@NoArgsConstructor
+public class Item {
+
 	@Id
-	@GeneratedValue					// 선택안하면 AUTO
-	@Column(name = "MEMBER_ID")
+	@GeneratedValue
+	@Column(name = "ITEM_ID")
 	private Long id;
-	
-	private String name;
-	private String city; 
-	private String street;
-	private String zipcode;
+	private String name ; 
+	private int price;
+	private int stockQuantity;
 }
