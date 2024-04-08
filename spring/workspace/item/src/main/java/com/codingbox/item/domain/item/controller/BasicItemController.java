@@ -18,9 +18,6 @@ import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
-
-
 @Controller
 @RequestMapping("basic/items")
 @RequiredArgsConstructor 		//생성자를 자동으로 만듬 
