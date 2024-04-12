@@ -1,0 +1,25 @@
+1. 자바 가변길이 인자 
+ - 파라미터 가변인자 
+ - 자바에서는 파라미터의 개수가 다르면 다른 메서드로 인식을 한다. 
+   동일한 기능을 하지만 파리미터가 가변적으로 변경되는 경우 오버로딩을 사용한다 
+ - 그런데 오버로딩은 파라미터 개수에 맞춰 메소드가 계속 늘어나는 구조이다.
+
+public void search(Stirng one){}
+public void search(Stirng one, String two){}
+public void search(Stirng one, String two , String three){}
+public void search(Map <Sting, String> param){}
+public void search(String[] param){}
+public void search(List<String> param){}
+pulbic void search(pramVo param){}
+
+ - 가변인자를 사용하면 동적으로 파라미터를 받을 수 있다.
+ - 사용방법은 변수 타입 뒤에 기호(...)를 붙여주면 된다.
+
+2. 영속성전이( CASCADE )란?
+ - 특정 엔티티에 대해 특정한 작업을 수행하면 관련된 엔티티에도 동일한 작업을 수행한다는 의미
+ - 엔티티관계를 정의하는데 사용되는 옵션 중 하나이다 . 
+ - 이 옵션은 부모 엔티티의 변경 사항이 자식 엔티티에 모두 전파되도록 지정한다.
+ - CascadeType.ALL은 다음과 같은 작업을 수행한다
+	-> 부모 엔티티가 저장될 때 , 자식 엔티티도 함께 저장
+	-> 부모 엔티티가 업데이트될 때, 자식 엔티티도 함께 업데이트
+ 	-> 부모 엔티티가 삭제될 때, 자식 엔티티도 함께삭제

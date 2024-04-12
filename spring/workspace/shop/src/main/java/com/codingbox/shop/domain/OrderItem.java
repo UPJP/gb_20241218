@@ -28,4 +28,22 @@ public class OrderItem {
 	private int orderPrice;
 	private int count;
 	
+	//============= 비즈니스 로직 ===================
+	public static OrderItem createOrderItem(Item item, int price, int count) {
+		OrderItem orderItem = new OrderItem();
+		orderItem.setItem(item);
+		orderItem.setOrderPrice(price);
+		orderItem.setCount(count);
+		
+		//주문한 만큼 재고 조정 -> item 
+		item.removeStock(count);
+		
+		
+		return orderItem;
+	}
+
+	public void cancel() {
+		getItem().addStock(count);
+	}
+	
 }
