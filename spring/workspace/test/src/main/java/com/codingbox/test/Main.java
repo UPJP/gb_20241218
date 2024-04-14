@@ -9,44 +9,34 @@ public class Main {
 		int M, N;
 		M = sc.nextInt();
 		N = sc.nextInt();
-		
-		int[] aaa = new int [N];
-		
 
-		int Min = N, Sum = 0, count=0;
-		
-		for (int i = M; i < N; i++) {
-			boolean sosu=true;
-			
-			int j = 2;
-			while (i <= j) {
+
+		int Min = N, Sum = 0;
+
+		for (int i = M; i <= N; i++) {
+			boolean jo = true;
+			for (int j = 2; j < i; j++) {
 				if (i % j == 0 ) {
-					sosu = false;
+					jo = false;
 					break;
 				}
-				j++;
+			}
 			
+			if(jo && i!=1) {
+				Sum += i;
+				if(i < Min) {
+					Min = i;
+				}
 			}
-			if (sosu && i != 1) {
-				 aaa[count]=i;
-				 Sum += i;
-				 count++;
-				 if(i < Min ) {
-					 Min = i;
-				 }
-			}
+
 		}
-		System.out.println(aaa[0]);
-		System.out.println(aaa[1]);
-		System.out.println(aaa[2]);
-		System.out.println(aaa[3]);
-		System.out.println(aaa[4]);
-		System.out.println(aaa[5]);
 		
-		System.out.println(Sum);
-		if(Min != N) {
+	
+		if (Min != N) {
+			System.out.println(Sum);
 			System.out.println(Min);
+		}else {
+			System.out.println(-1);
 		}
 	}
-
 }
