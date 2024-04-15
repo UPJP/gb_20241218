@@ -48,6 +48,7 @@ public class OrderService {
 		return orderRepository.findAll(orderSearch);
 	}
 
+	@Transactional
 	public void cancelOrder(Long orderId) {
 		// 영속성 컨텍스트  //취소했을대 나타나는 비즈니스 로직
 		Order order = orderRepository.findOne(orderId);
