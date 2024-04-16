@@ -11,10 +11,11 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import oracle.net.aso.q;
 
 import static com.codingbox.querydsl.domain.QMember.*;
 
-public class QueryDSLMain {
+public class QueryDSLMain4 {
 
 	public static void main(String[] args) {
 		EntityManagerFactory emf
@@ -35,42 +36,29 @@ public class QueryDSLMain {
 			Member member2 =new Member("member2",20,teamA);
 			Member member3 =new Member("member3",30,teamB);
 			Member member4 =new Member("member4",40,teamB);
+			Member member5 =new Member(null,100,teamB);
+			Member member6 =new Member("member6",100,teamB);
+			Member member7 =new Member("member7",100,teamB);
+
 			em.persist(member1);
 			em.persist(member2);
 			em.persist(member3);
 			em.persist(member4);
+			em.persist(member5);
+			em.persist(member6);
+			em.persist(member7);
 			
 			
 			//초기화
 			em.flush();
 			em.clear();
 			
-			List<Member> members = em.createQuery("select m from Member m",Member.class)
-									 .getResultList();
-			
-			for(Member member : members) {
-				System.out.println("member : "+member);
-				System.out.println("-> member.team : "+member.getTeam());
-			}
-			
-			// jpql : member1을 찾기
-			String jpqlString = "select m from Member m where m.username = :username";
-			
-			Member findByJpql = em.createQuery(jpqlString,Member.class)
-								  .setParameter("username","member1")
-								  .getSingleResult();
-			System.out.println("findByJpql : " + findByJpql.getUsername().equals("member1"));
-			
-			
-			// QMember의 이름을 부여한다. 별칭부여. 크게 중요하진 않음
-			//QMember m = new QMember("m");
-//			QMember m = QMember.member;  
-			Member findByQueryDSL = queryFactory.select(member)
-												.from(member)
-												.where(member.username.eq("member1")
-														.and(member.age.eq(10))) // 파라미터 바인딩
-												.fetchOne();
-			System.out.println("findByQueryDSL : " + findByQueryDSL.getUsername().equals("member1"));
+			//페이징 
+			List<Member> result = queryFactory.selectFrom(member)
+											  .orderBy(member.username.desc())
+											  .offset(1)	//0부터, 2부터 조회를 해줘
+											  .limit(2)		//최대 2건 조회
+											  .fetch();
 			
 			tx.commit();
 		}catch (Exception e) {

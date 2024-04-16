@@ -3,8 +3,9 @@ package com.codingbox.querydsl;
 import java.util.List;
 
 import com.codingbox.querydsl.domain.Member;
-import com.codingbox.querydsl.domain.QMember;
+
 import com.codingbox.querydsl.domain.Team;
+import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
 import jakarta.persistence.EntityManager;
@@ -14,7 +15,7 @@ import jakarta.persistence.Persistence;
 
 import static com.codingbox.querydsl.domain.QMember.*;
 
-public class QueryDSLMain {
+public class QueryDSLMain5 {
 
 	public static void main(String[] args) {
 		EntityManagerFactory emf
@@ -22,7 +23,7 @@ public class QueryDSLMain {
 		EntityManager em = emf.createEntityManager();		
 		EntityTransaction tx = em.getTransaction();
 		// queryDSL
-		JPAQueryFactory queryFactory =new JPAQueryFactory(em); 
+		JPAQueryFactory queryFactory =new JPAQueryFactory(em);
 		tx.begin();
 		
 		try {
@@ -35,43 +36,49 @@ public class QueryDSLMain {
 			Member member2 =new Member("member2",20,teamA);
 			Member member3 =new Member("member3",30,teamB);
 			Member member4 =new Member("member4",40,teamB);
+			Member member5 =new Member(null,100,teamB);
+			Member member6 =new Member("member6",100,teamB);
+			Member member7 =new Member("member7",100,teamB);
+
 			em.persist(member1);
 			em.persist(member2);
 			em.persist(member3);
 			em.persist(member4);
+			em.persist(member5);
+			em.persist(member6);
+			em.persist(member7);
 			
 			
 			//초기화
 			em.flush();
 			em.clear();
+
+			/*
+			 * jpql
+			 * 	select
+			 * 		count(m),		//회원수
+			 * 		sum(m.age),		//나이 합
+			 * 		avg(m.age),		//평균나이
+			 * 		max(m.age),		//최대나이
+			 * 		min(m.age),		//최소나이
+			 * from Member m 
+			 */
+			List<Tuple> result = queryFactory.select(member.count(),
+													 member.age.sum(),
+													 member.age.avg(),
+													 member.age.max(),
+													 member.age.min()
+					)
+					.from(member)
+					.fetch();
+			Tuple tuple = result.get(0);
 			
-			List<Member> members = em.createQuery("select m from Member m",Member.class)
-									 .getResultList();
-			
-			for(Member member : members) {
-				System.out.println("member : "+member);
-				System.out.println("-> member.team : "+member.getTeam());
-			}
-			
-			// jpql : member1을 찾기
-			String jpqlString = "select m from Member m where m.username = :username";
-			
-			Member findByJpql = em.createQuery(jpqlString,Member.class)
-								  .setParameter("username","member1")
-								  .getSingleResult();
-			System.out.println("findByJpql : " + findByJpql.getUsername().equals("member1"));
-			
-			
-			// QMember의 이름을 부여한다. 별칭부여. 크게 중요하진 않음
-			//QMember m = new QMember("m");
-//			QMember m = QMember.member;  
-			Member findByQueryDSL = queryFactory.select(member)
-												.from(member)
-												.where(member.username.eq("member1")
-														.and(member.age.eq(10))) // 파라미터 바인딩
-												.fetchOne();
-			System.out.println("findByQueryDSL : " + findByQueryDSL.getUsername().equals("member1"));
-			
+			System.out.println(tuple.get(member.count()));
+			System.out.println(tuple.get(member.age.sum()));
+			System.out.println(tuple.get(member.age.avg()));
+			System.out.println(tuple.get(member.age.max()));
+			System.out.println(tuple.get(member.age.min()));
+					
 			tx.commit();
 		}catch (Exception e) {
 			tx.rollback();

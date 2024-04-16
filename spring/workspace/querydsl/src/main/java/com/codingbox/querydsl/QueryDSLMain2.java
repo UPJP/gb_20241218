@@ -14,7 +14,7 @@ import jakarta.persistence.Persistence;
 
 import static com.codingbox.querydsl.domain.QMember.*;
 
-public class QueryDSLMain {
+public class QueryDSLMain2 {
 
 	public static void main(String[] args) {
 		EntityManagerFactory emf
@@ -22,7 +22,7 @@ public class QueryDSLMain {
 		EntityManager em = emf.createEntityManager();		
 		EntityTransaction tx = em.getTransaction();
 		// queryDSL
-		JPAQueryFactory queryFactory =new JPAQueryFactory(em); 
+		JPAQueryFactory queryFactory =new JPAQueryFactory(em);
 		tx.begin();
 		
 		try {
@@ -45,32 +45,18 @@ public class QueryDSLMain {
 			em.flush();
 			em.clear();
 			
-			List<Member> members = em.createQuery("select m from Member m",Member.class)
-									 .getResultList();
+//			//여러건
+//			List<Member> fetch =queryFactory.selectFrom(member)
+//											.fetch();
+//			//단건
+//			Member findMember1 =queryFactory.selectFrom(member)
+//											.fetchOne();
 			
-			for(Member member : members) {
-				System.out.println("member : "+member);
-				System.out.println("-> member.team : "+member.getTeam());
-			}
+			Long totalCount = queryFactory.select(member.count())
+										  .from(member)
+										  .fetchOne();
+			System.out.println("totalCount : "+totalCount);
 			
-			// jpql : member1을 찾기
-			String jpqlString = "select m from Member m where m.username = :username";
-			
-			Member findByJpql = em.createQuery(jpqlString,Member.class)
-								  .setParameter("username","member1")
-								  .getSingleResult();
-			System.out.println("findByJpql : " + findByJpql.getUsername().equals("member1"));
-			
-			
-			// QMember의 이름을 부여한다. 별칭부여. 크게 중요하진 않음
-			//QMember m = new QMember("m");
-//			QMember m = QMember.member;  
-			Member findByQueryDSL = queryFactory.select(member)
-												.from(member)
-												.where(member.username.eq("member1")
-														.and(member.age.eq(10))) // 파라미터 바인딩
-												.fetchOne();
-			System.out.println("findByQueryDSL : " + findByQueryDSL.getUsername().equals("member1"));
 			
 			tx.commit();
 		}catch (Exception e) {
