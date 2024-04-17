@@ -41,7 +41,29 @@ member.username.like("member%")
  - nullLast() , nullFirst() : null 데이터 순서 부여
 
 
+5. Query DSL조인
+ - 조인의 기본 문법은 첫 번째 파라미터에 조인 대상을 지정하고,  
+   두번째 파라미터에 별칭으로 사용할 Q타입을 지정하면 된다.
 
+ - join() : inner join
+ - left join() : left outer join
 
+6. 서브쿼리의 한계 
+ - JPA, JPQL 서브쿼리의 한계점으로는 from 절의 서브쿼리는 지원하지 않는다.
+   당연히 QueryDSL도 지원하지 않는다.
 
+6-1. 해결방안
+ - 서브쿼리를 join으로 변경한다.
+ - 애플리케이션에서 쿼리를 2번 분리해서 실행한다.
+ - nativeSQL을 사용한다. //생쿼리
 
+7. 프로젝션과 결과 반환
+ - 프로젝션 : select 대상
+ queryFactory.select(member.username)
+		  .from(member)
+		  .fetch();
+8. QueryDSL 빈 생성 (3가지)
+ - 결과를 DTO 반환할 때 사용
+ - 프로퍼티 접근
+ - 필드 직접 접근
+ - 생성자 이용
