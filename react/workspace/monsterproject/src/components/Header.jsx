@@ -1,7 +1,7 @@
 function Header() {
     return (
         <header>
-            <h1>googig</h1>
+            <h1>헤더</h1>
         </header>
     )
 }

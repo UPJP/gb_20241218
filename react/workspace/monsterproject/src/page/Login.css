@@ -1,0 +1,4 @@
+.LoginMainBody{
+    display: flex;
+    flex-direction: column;
+}

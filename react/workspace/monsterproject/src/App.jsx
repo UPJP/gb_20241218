@@ -1,14 +1,20 @@
-import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Routes 추가
+import Home from './page/Home';
+import Login from './page/Login';
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route>
+            <Route index element={<Home />} />   {/*홈페이지 라우팅 건들 ㄴ*/}
+            <Route path='/Login' element={<Login />} />  {/* 로그인페이지 */}
+
+
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }
