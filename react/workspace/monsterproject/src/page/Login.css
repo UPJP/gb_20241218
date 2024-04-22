@@ -1,4 +1,187 @@
-.LoginMainBody{
-    display: flex;
-    flex-direction: column;
+.LoginMainBody {
+  display: grid;
+  grid-gap: 10px;
+
+
+}
+
+.LoginHeader{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#email {
+  grid-column: 1 /4;
+  grid-row: 1;
+}
+
+#pass {
+  grid-column: 1 / 4;
+  grid-row: 2;
+}
+
+#pass2 {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+#date__yy {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#date__mm {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#date__dd {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.separator {
+  display: block;
+  margin: 30px auto 10px;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  background: transparent;
+  color: rgba(#0f132a, .4);
+  font-size: 13px;
+  width: 90%;
+  max-width: 680px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background: rgba(#0f132a, .2);
+    height: 1px;
+    width: 45%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    background: rgba(#0f132a, .2);
+    height: 1px;
+    width: 45%;
+  }
+}
+
+.origin__btn {
+  background: #e91e63;
+  color: white;
+  display: block;
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 15px 30px rgba(#e91e63, .36);
+  transition: .2s linear;
+
+  &:hover {
+    box-shadow: 0 0 0 rgba(#e91e63, .0);
+  }
+}
+
+.no__btn {
+  margin: 10px;
+  border-bottom: grey solid 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-bottom 0.3s ease;
+
+  &.no__btn:hover {
+    border-bottom: rgb(0, 0, 0) solid 1px;
+    transition-delay: 0.2s;
+
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.google__btn,
+.kakao__btn,
+.naver__btn {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  height: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  border: none;
+  line-height: 40px;
+
+  &.google__btn {
+    background: #5b90f0;
+    color: white;
+    box-shadow: 0 15px 30px rgba(#5b90f0, .36);
+    transition: .2s linear;
+
+    .fa {
+      font-size: 20px;
+      padding: 0 5px 0 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 rgba(#5b90f0, .0);
+    }
+  }
+
+  &.kakao__btn {
+    background: #f1da54;
+    color: white;
+    box-shadow: 0 15px 30px rgba(#f1da54, .36);
+    transition: .2s linear;
+
+    .fa {
+      font-size: 20px;
+      padding: 0 5px 0 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 rgba(#f1da54, .0);
+    }
+  }
+
+  &.naver__btn {
+    background: #1bd65a;
+    color: white;
+    box-shadow: 0 15px 30px rgba(#1bd65a, .36);
+    transition: .2s linear;
+
+    .fa {
+      font-size: 20px;
+      padding: 0 5px 0 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 rgba(#1bd65a, .0);
+    }
+  }
 }
