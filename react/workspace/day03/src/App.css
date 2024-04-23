@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(37, 36, 32);
+    color: #ffffff;
+}
+body{
+    padding: 20px;
+}
+
+.App{
+    margin: 0 auto;
+    width: 400px;
+}
+
+.App > section{
+    background-color: rgb(68, 68, 68);
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

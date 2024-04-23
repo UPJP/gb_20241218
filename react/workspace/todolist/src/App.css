@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(37, 36, 32);
+    color: #ffffff;
+}
+
+.App {
+    width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
