@@ -1,4 +1,7 @@
 import './Login.css'
+import { FcGoogle } from "react-icons/fc";
+import { SiNaver, SiKakaotalk } from "react-icons/si";
+
 
 //////////////////js//////////////////////
 
@@ -11,11 +14,11 @@ function LoginHeader() {
             <div className='LoginHeader'>
                 <nav>
                     {/* 로그인 */}
-                    <button className='no__btn' style={{marginRight: '0px'}}>로그인</button>
+                    <button className='no__btn' style={{ marginRight: '0px' }}>로그인</button>
                 </nav>
                 <nav>
                     {/* 회원가입 */}
-                    <button className='no__btn' style={{marginLeft: '0px'}} >회원가입</button>
+                    <button className='no__btn' style={{ marginLeft: '0px' }} >회원가입</button>
                 </nav>
             </div>
         </header>
@@ -63,17 +66,17 @@ function LoginFooter() {
             </div>
             {/*  google button */}
             <button className='google__btn'>
-                <i className="fa fa-google"></i>
+                <FcGoogle />
                 Sign in with Google
             </button>
             {/*  kakao button */}
             <button className='kakao__btn'>
-                <i className="fa fa-google"></i>
+                <SiKakaotalk />
                 Sign in with Kakao
             </button>
             {/*  naver button */}
             <button className='naver__btn'>
-                <i className="fa fa-google"></i>
+                <SiNaver />
                 Sign in with Naver
             </button>
         </footer>

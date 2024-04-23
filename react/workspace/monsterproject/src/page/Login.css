@@ -140,10 +140,10 @@
   &.google__btn {
     background: #5b90f0;
     color: white;
-    box-shadow: 0 15px 30px rgba(#5b90f0, .36);
+    box-shadow: 1 15px 30px rgba(#3576ee, .36);
     transition: .2s linear;
 
-    .fa {
+    svg {
       font-size: 20px;
       padding: 0 5px 0 0;
     }
@@ -154,12 +154,12 @@
   }
 
   &.kakao__btn {
-    background: #f1da54;
-    color: white;
-    box-shadow: 0 15px 30px rgba(#f1da54, .36);
+    background: #FEE500;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 15px 30px rgba(#FEE500, .36);
     transition: .2s linear;
 
-    .fa {
+    svg {
       font-size: 20px;
       padding: 0 5px 0 0;
     }
@@ -170,18 +170,18 @@
   }
 
   &.naver__btn {
-    background: #1bd65a;
+    background: #03C75A;
     color: white;
-    box-shadow: 0 15px 30px rgba(#1bd65a, .36);
+    box-shadow: 0 15px 30px rgba(#03C75A, .36);
     transition: .2s linear;
 
-    .fa {
+    svg {
       font-size: 20px;
       padding: 0 5px 0 0;
     }
 
     &:hover {
-      box-shadow: 0 0 0 rgba(#1bd65a, .0);
+      box-shadow: 0 0 0 rgba(#03C75A, .0);
     }
   }
 }
