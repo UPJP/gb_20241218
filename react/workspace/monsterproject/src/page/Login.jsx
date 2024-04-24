@@ -1,6 +1,7 @@
 import './Login.css'
 import { FcGoogle } from "react-icons/fc";
-import { SiNaver, SiKakaotalk } from "react-icons/si";
+import { SiNaver } from "react-icons/si";
+import { HiMiniChatBubbleOvalLeft } from "react-icons/hi2";
 
 
 //////////////////js//////////////////////
@@ -51,7 +52,7 @@ function LoginMain() {
 
                 </div>
                 <input type='checkbox' />개인정보수집·이용약관 동의 <a href='#'>보기</a>
-                <button className='origin__btn' >회원가입</button>
+                <button type='submit' className='origin__btn' >회원가입</button>
             </form>
         </main>
     );
@@ -61,23 +62,23 @@ function LoginMain() {
 function LoginFooter() {
     return (
         <footer>
-            <div className='separator'>
+            <div className='footer'>
                 <p>OR</p>
             </div>
             {/*  google button */}
             <button className='google__btn'>
                 <FcGoogle />
-                Sign in with Google
+                구글로 간편가입
             </button>
             {/*  kakao button */}
             <button className='kakao__btn'>
-                <SiKakaotalk />
-                Sign in with Kakao
+                <HiMiniChatBubbleOvalLeft />   {/* 얘 자체 오류있음  */}
+                카카오로 간편가입
             </button>
             {/*  naver button */}
             <button className='naver__btn'>
                 <SiNaver />
-                Sign in with Naver
+                네이버로 간편가입
             </button>
         </footer>
     );
