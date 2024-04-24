@@ -122,6 +122,11 @@
     opacity: 1;
   }
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url('./font/Montserrat/Montserrat-Medium.ttf'
+  ); 
+}
 
 .google__btn,
 .kakao__btn,
