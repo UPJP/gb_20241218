@@ -1,8 +1,11 @@
+import {TodoSateContext } from "../App";
 import "./List.css";
 import TodoItem from "./TodoItem";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useContext } from "react";
 
-function List({todos,onUpdate, onDelete}){
+function List(){
+    const todos = useContext(TodoSateContext);
+
     const [search, setSearch] = useState("");
     const onChageSearch =(e)=>{
         setSearch(e.target.value);
@@ -55,7 +58,8 @@ function List({todos,onUpdate, onDelete}){
                 placeholder="검색어를 입력하세요"/>
             <div>
                 {filterdTodos.map((todo)=>{
-                    return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete}/>
+                    return <TodoItem 
+                                key={todo.id} {...todo} />
                 })}
             </div>
         </div>

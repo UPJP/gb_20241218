@@ -1,4 +1,5 @@
 import "./Heder.css";
+import { memo } from "react";
 
 function Heder(){
     return(
@@ -8,5 +9,8 @@ function Heder(){
         </div>
     );
 }
-export default Heder;
 
+// const modizedHeader = memo(Heder);
+// export default modizedHeader;
+
+export default memo(Heder);

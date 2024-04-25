@@ -1,7 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import "./Editor.css"
+import {  TodoDispatcherContext } from "../App";
 
-function Editor({ onCreate }) {
+function Editor() {
+    // 구조분해 할당으로 {onCreate만 받아온다}
+    const {onCreate} = useContext(TodoDispatcherContext);
+    
     //input박스 onChage 이벤트 ,
     // 이벤트가 발생할 때 마다 입련된 content값을 
     // useState훅 값을 가지고 있는  처리 
