@@ -1,0 +1,37 @@
+1. useParams
+ - url 파라미터 값을 알기위해 사용하는 훅
+ - 현재 경로의 URL 파라미터 값을 추출할 수 있는 편리한 방법
+ - 예를 들어, /users/:id 와 같은 동적 경로를 사용하는 라우트에서 :id 부분에 해당하는 값에 접근할 수 있다.
+
+2. useSearchParams
+ - URL의 쿼리 파라미터를 다루는데 사용된다.
+ - ?key=value 형식은 URL에 추가되는 파라미터를 말한다.
+
+3. create SearchParams
+ - 클래스를 통해 브라우저의 URL 쿼리 파라미터를 조작하는것을 의미한다. 
+ - URL의 query string을 다루는데 사용한다
+
+4. debug 레벨 
+ -Trace < Debug < info < Warn < 
+
+5. jUnit 
+ - 유닛 테스트 
+ 	-> java에서 단위기반 테스트 프레임 워크 
+ 	-> 프로그래밍에서 모든 함수와 메서드에 대한 테스트 케이스를 작성하여 의도된 대로 잘 동작하는지 검증하는 절차 
+	-> 프로그램을 작은 단위로 쪼개어 각 단위로 정확하게 동작하는지 검사함으로써 프로그램의 안정성을 높임
+	-> 개발기간 중 대부분을 차지하는 디버깅 시간을 단축해준다.
+ - 단정 메서드
+	-> 단정(Assert)메서드로 테스 케이스의 수행 결과를 판별
+
+6. Java Optional <>
+ - Optional은 null을 감싸서 NullPointerException(NPE)
+   으로부터 부담을 줄이기 위해 등장한 Wrapper 클래스이다.
+ - Optional은 메서드의 결과가 null이 될 수 있으며, 
+   null에 의해 오류가 발생할 가능성이 매우 높을 때 반환.
+
+7.  QuerydslRepositorySupport 
+ - 추상클래스로써 QueryDsl을 편하게 사용하기 위해 구현된 클래스이다.
+ - Spring Data JPA와 QueryDSL을 함께 사용하여 커스텀쿼리를 작성하고 실행할 수 있도록 지원하는 클래스  
+ - JPA는 기본적으로 메서드 이름에 따라 쿼리를 자동 생성해 주지만, 
+   복잡한 동적 쿼리나 특정 조건에 따른 쿼리를 작성하기에는 한계가 있다. 그래서 QueryDSL을 사용  
+ -  QuerydslRepositorySupport는 JPA와 JpaRepository를 확장하여 QueryDsl을 편하게 사용할 수 있도록 도와준다.
