@@ -13,13 +13,13 @@ function LoginHeader() {
     return (
         <header>
             <div className='LoginHeader'>
-                <nav>
+                <nav  style={{ marginRight: '0px' }}>
                     {/* 로그인 */}
-                    <button className='no__btn' style={{ marginRight: '0px' }}>로그인</button>
+                    <button className='no__btn'>로그인</button>
                 </nav>
-                <nav>
+                <nav  style={{ marginLeft: '0px' }}>
                     {/* 회원가입 */}
-                    <button className='no__btn' style={{ marginLeft: '0px' }} >회원가입</button>
+                    <button className='no__btn' >회원가입</button>
                 </nav>
             </div>
         </header>
@@ -51,7 +51,12 @@ function LoginMain() {
                     </select>
 
                 </div>
+
+                {/* 정보 수집권한 체크란 */}
+                <div className='Lcheckbox'>
                 <input type='checkbox' />개인정보수집·이용약관 동의 <a href='#'>보기</a>
+                </div>
+
                 <button type='submit' className='origin__btn' >회원가입</button>
             </form>
         </main>
@@ -62,7 +67,7 @@ function LoginMain() {
 function LoginFooter() {
     return (
         <footer>
-            <div className='footer'>
+            <div className='LoginFooter'>
                 <p>OR</p>
             </div>
             {/*  google button */}
@@ -72,7 +77,7 @@ function LoginFooter() {
             </button>
             {/*  kakao button */}
             <button className='kakao__btn'>
-                <HiMiniChatBubbleOvalLeft />   {/* 얘 자체 오류있음  */}
+                {/* <HiMiniChatBubbleOvalLeft />   얘 자체 오류있음  */}
                 카카오로 간편가입
             </button>
             {/*  naver button */}
@@ -91,6 +96,19 @@ function Login() {
             <LoginHeader />
             <LoginMain />
             <LoginFooter />
+
+            <ul className="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     );
 }
