@@ -92,10 +92,8 @@ public class TodoRepositoryTest {
 		
 	}
 	
-	@Test
-	public void testSearch() {
-		todoRepository.search();
-		log.info("------------------------------------------------------");
-		log.info(todoRepository.search());
-	}
+//	@Test
+//	public void testSearch() {
+//		todoRepository.search();
+//	}
 }

@@ -1,0 +1,83 @@
+/                      Main
+/about               About
+
+api
+/todo/list               get :          /api/todo/list?page=3&size=10
+/todo/                     post :       /api/todo
+/todo/read/33            get :          /api/todo/{tno}
+/todo/modify/33         put :          /api/todo/{tno}
+/todo/delete/33         delete :       /api/todo/{tno}
+
+
+1. 타입 파라미터 정의
+- List<T> array = new ArrayList<>();
+- FruitBox<Integer> intBox = new FruitBox<>();
+- FruitBox<Apple> appleBox = new FruitBox<>(); 	//Apple이라는 클래스를 있다고 가정
+
+//제너릭 타입 전파  
+class FruitBox<T>{						//T는 그냥 변수임, T는 Apple이 담기게 되는거임 
+	List<T> fruits =new ArrayList<>();
+	public void add(T fruit){
+		fruits.add(fruit);
+}
+
+2. IntStream.rangeClosed 
+ for(int i =0; i<=10; i++){
+	System.out.println(i);
+}
+//1,2,3,4,5,6,7,8,9.10
+-------------------------------------------------------------------------
+IntStream.rangeClosed (1,10).forEach(i->{
+	System.out.print(i)
+});
+
+3. @RestController
+ - @Controller + @ ResponseBody
+ - 당연하게도 @RestController의 주용도는 Json 형태로 객체 데이터를 반환하는것
+
+4. url 설계 
+ - PathVariable vs QueryParam
+ - 기준 값(pk)  : /users/33
+ - 변하는 값 : QueryParam  
+ 
+5. @RestControllerAdvice
+ - @Controller 어노테이션이 붙은 컨트롤러에서 발생하는 예외를 처리
+ - @ControllerAdvice, @RestControllerAdvice 는 전역적으로 예외를 처리할 수 있는 어노테이션이다.	
+
+6. Rest API란 
+ - Rest API Rest를 기반으로 만들어진 API이다. Rest 부터
+
+6-1. Rest 란 
+ - Representational State Transfer
+ - 자원의 이름으로 구분하여 해당 자원의 상태를 주고받는 모든 것을 의미한다
+ - HTTP URI를 통해 자원을 명시하고, 
+ - HTTP Methode(POST, GET, PUT, DELETE, PATCH 등)를 통해 
+ - 해당 자원(URI)에 대한 CRUD Operation을 적용하는 것 
+ - API는 애플리케이션이나 디바이스가 서로 간에 연결하여 통신할 수 있는 방법을 정의하는 규칙 세트이다.
+ - REST API는 REST 아키텍처 스타일의 디자인 원칙을 준수하는 API이다. 
+ - REST API를 RESTful API라고도 한다.
+ - Create : 데이터생성(POST)
+ - Read : 데이터조회(GET)
+ - Update : 데이터 수정(PUT, PATCH)
+ - Delte : 데이터 삭제(DELTE)
+
+6-2. REST API 설계 예시 
+ - URI는 동사보다 명사를 , 대문자보다는 소문자를 사용한다.
+	:9090/Running    (X) 나쁜예시
+	:9090/run		(o) 좋은예시
+
+ - 마지막에 슬래시(/)는 포함하지 않는다.
+	:9090/test/   	 (X) 나쁜예시
+	:9090/test		 (o) 좋은예시
+
+ - 언더바 대신 하이픈을 사용한다 
+	:9090/run_blog    (X) 나쁜예시
+	:9090/run-blog	(o) 좋은예시
+ 
+ - 파일확장자는 URI에 포함하지 않는다 . 
+ 	:9090/photo.jpg    (X) 나쁜예시
+	:9090/photo         (o) 좋은예시
+
+ - 행위(CRUD)를 포함하지 않는다. 
+ 	:9090/delete-post/1    (X) 나쁜예시
+	:9090/post/1	      (o) 좋은예시
