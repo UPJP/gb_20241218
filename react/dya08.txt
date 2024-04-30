@@ -4,3 +4,6 @@
  - 비동기 통신을 구현하기 위해 axios, async, await를 사용한다
  - axios가 완료될때까지 시간이 필요하기 때문에 async와 await는 js에게 시간이 필요하다고
    전달한 후, 완료될때까지 기다렸다가 완료된 후 계속한다.
+
+ 1-1. lib 설치
+ - npm install axios
