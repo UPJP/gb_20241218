@@ -1,0 +1,6 @@
+1. Axios 
+ - javascript로 구현된 비동기 통신라이브러리 
+ - json parsing의 번거로움 없이 손쉽게 셋팅된다. 
+ - 비동기 통신을 구현하기 위해 axios, async, await를 사용한다
+ - axios가 완료될때까지 시간이 필요하기 때문에 async와 await는 js에게 시간이 필요하다고
+   전달한 후, 완료될때까지 기다렸다가 완료된 후 계속한다.
