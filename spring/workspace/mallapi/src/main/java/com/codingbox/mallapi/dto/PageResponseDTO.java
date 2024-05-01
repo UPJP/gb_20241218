@@ -68,5 +68,8 @@ public class PageResponseDTO<E> {
 		// prevpage(이전 페이지 번호)
 		this.prevPage = prev ? start -1 : 0;
 		this.nextPage = next ? end + 1 : 0;
+		
+		this.totalPage = this.pageNumberList.size();
+		this.current = pageRequestDTO.getPage();
 	}
 }

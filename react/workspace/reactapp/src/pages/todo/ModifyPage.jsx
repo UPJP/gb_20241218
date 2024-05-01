@@ -1,7 +1,15 @@
+import { useParams } from "react-router-dom";
+import ModifyComponent from "../../components/todo/ModifyComponent";
+
 function ModifyPage(){
+    const {tno} = useParams();
+
     return(
-        <div className="text-3xl font-extrabold">
-            Todo Modify Page
+        <div className="p-4 w-full bg-white">
+            <div className="text-3xl font-extrabold">
+                Todo Modify page
+            </div>
+            <ModifyComponent tno={tno} />
         </div>
     );
 }

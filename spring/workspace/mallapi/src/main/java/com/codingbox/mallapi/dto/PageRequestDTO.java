@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class PageRequestDTO {
 	private int page =1 ; 	//페이지 번호
 	private int size = 10; 	//페이지 사이즈
-	
+
 
 }
