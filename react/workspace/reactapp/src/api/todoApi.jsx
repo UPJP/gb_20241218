@@ -1,7 +1,8 @@
 import axios from "axios";
 
-// 경로를 작성
-export const API_SERVER_HOST = 'http://localhost:9090';
+// 경로를 작성                      
+// export const API_SERVER_HOST = 'http://localhost:9090';
+export const API_SERVER_HOST = 'http://ec2-13-125-227-99.ap-northeast-2.compute.amazonaws.com:9090';
 const prefix = `${API_SERVER_HOST}/api/todo`;
 
 // 비동기 통신

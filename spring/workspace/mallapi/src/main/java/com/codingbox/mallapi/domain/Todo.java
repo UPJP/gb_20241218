@@ -18,8 +18,10 @@ import lombok.ToString;
 @Getter @ Setter
 @NoArgsConstructor
 public class Todo {
-	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "todoGenerator")
-	@SequenceGenerator(sequenceName = "todo_seq", name = "todoGenerator", allocationSize = 1)
+//  @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "todoGenerator")
+//	@SequenceGenerator(sequenceName = "todo_seq", name = "todoGenerator", allocationSize = 1)  //<- 로컬 오라클
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // <-aws mysql 
 	private Long tno;
 	
 	@Column(length = 500, nullable = false)
