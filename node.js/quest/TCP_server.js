@@ -1,4 +1,3 @@
-//서버생성
 const net = require('net');       // 네트워크 관련 기능을 제공하는 net 모듈을 불러옴
 const fs = require('fs');         // 파일 시스템 관련 기능을 제공하는 fs 모듈을 불러옴
 const path = require('path');     // 파일 경로를 처리하는 path 모듈을 불러옴
@@ -27,10 +26,11 @@ const server = net.createServer((socket) => {
             if (Array.isArray(jsonData)) {
                 // jsonData 배열을 순회하면서 각각의 객체를 파일로 저장
                 jsonData.forEach((item, index) => {
-                    const fileName = `data${index + 1}.txt`; // 파일 이름을 data1.txt, data2.txt ... 로 설정
+                    // 예를 들어 객체 속성에 따라 파일명을 다르게 지정하거나 내용 구조를 다르게 설정할 수 있음
+                    const fileName = `data${index + 1}.json`; // 파일 이름을 data1.json, data2.json ... 로 설정
                     const filePath = path.join(logDir, fileName); // 로그 폴더 내에 파일 경로 설정
 
-                    // 각 객체를 파일에 저장 (객체를 JSON 형태로 파일에 저장)
+                    // 객체를 파일에 저장 (객체를 JSON 형태로 파일에 저장)
                     fs.writeFileSync(filePath, JSON.stringify(item, null, 2), 'utf-8');
                     console.log(`${fileName} 저장 완료`); // 파일이 저장되었음을 콘솔에 출력
                 });
